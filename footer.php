@@ -1,10 +1,13 @@
+		</div><!-- Closing container  -->
+		
 
 		<footer>
-			<h4>This is the footer</h4>
-
+			<div class="row">
+				<div class="col-xs-12">
+					<p><?php echo get_theme_mod('laav_footer_text'); ?></p>
+				</div>
+			</div>			
 		</footer>
-		
-		</div><!-- Closing container  -->
 	<?php wp_footer(); ?>
 	</body>
 </html>

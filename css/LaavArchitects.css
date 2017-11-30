@@ -2,7 +2,19 @@
   text-decoration: none;
   padding: 0px;
   box-sizing: border-box; }
+
+
 body{
 	background-color: #2a364a;
 	color: #fff;
+}
+
+footer{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+}
+
+footer p{
+	padding: 1em;
 }
