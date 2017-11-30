@@ -7,6 +7,10 @@
 body{
 	background-color: #2a364a;
 	color: #fff;
+	/*overflow: hidden;*/
+}
+.row{
+	margin: 0px;
 }
 
 footer{
@@ -20,5 +24,6 @@ footer p{
 }
 
 .customLogo{
+	padding: 5%;
 	text-align: center;
 }
