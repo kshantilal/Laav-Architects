@@ -12,11 +12,25 @@
 	add_action('wp_enqueue_scripts', 'customThemeEnqueues');
 
 
+	//Header
+	function customLogoSetup(){
+		$customLogoSettings = array(
+			'height' => 100,
+			'width' => 100,
+			'flex-height' => true,
+			'flex-width' => true,
+			'header-text' => array('Branding Logo', 'This is your branding logo')
+		);
+		add_theme_support('custom-logo', $customLogoSettings);
+	}
+	add_theme_support('custom-logo');
+	add_action('after_setup_theme', 'customLogoSetup');
+
 
 	//Footer
-	function laav_footer_text($wp_customize){
+	function laavFooterText($wp_customize){
 		//Settings
-			$wp_customize->add_setting('laav_footer_text', array(
+			$wp_customize->add_setting('laavFooterText', array(
 				'default' => 'This is your footer text',
 				'transport' => 'refresh'
 			));
@@ -30,7 +44,7 @@
 			$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'laav_footer_text_control', array(
 				'label' => 'Footer Text',
 				'section' => 'laav_footer_text_section',
-				'settings' => 'laav_footer_text'
+				'settings' => 'laavFooterText'
 			)));
 	}
 
@@ -39,7 +53,7 @@
 
 
 	//Customize Colours
-	function laav_custom_colour($wp_customize){
+	function laavCustomColour($wp_customize){
 		//Settings
 			//Footer Setting Colour
 			$wp_customize->add_setting('laav_footer_colour', array(
@@ -82,7 +96,7 @@
 			)));
 	}
 
-	add_action('customize_register', 'laav_custom_colour');
+	add_action('customize_register', 'laavCustomColour');
 
 
 	function laav_customize_css(){

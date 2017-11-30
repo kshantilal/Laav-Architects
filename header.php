@@ -15,6 +15,11 @@
 	}
 ?>
 <body <?php body_class($bodyClass); ?>>
+	<div class="row">
+		<div class="container customLogo">
+			<div class="col-xs-12"><?php the_custom_logo('thumbnail'); ?></div>
+		</div>
+	</div>
 
 	<div class="container">
 		
