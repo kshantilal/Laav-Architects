@@ -27,3 +27,13 @@ footer p{
 	padding: 5%;
 	text-align: center;
 }
+
+
+/*Navigation*/
+ul{
+	list-style: none;
+}
+
+.menu {
+    margin: 30px;
+}

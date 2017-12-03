@@ -18,6 +18,7 @@
 	<div class="row">
 		<div class="container customLogo">
 			<div class="col-xs-12"><?php the_custom_logo('thumbnail'); ?></div>
+			<div class="col-xs-12"><?php wp_nav_menu(array('theme_location' =>'primary'));?></div>
 		</div>
 	</div>
 

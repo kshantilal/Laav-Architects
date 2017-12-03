@@ -26,13 +26,19 @@
 	add_theme_support('custom-logo');
 	add_action('after_setup_theme', 'customLogoSetup');
 
+	//Navigation bar
+	function customThemeSetup(){
+		add_theme_support('menus');
+		register_nav_menu('primary', 'This is the main navigation located at the top of the page');
+	}
+	add_action('init', 'customThemeSetup');
 
 	//Footer
 	function laavFooterText($wp_customize){
 		//Settings
 			$wp_customize->add_setting('laavFooterText', array(
 				'default' => 'This is your footer text',
-				'transport' => 'refresh'
+				'transport' => 'refesh'
 			));
 
 		//Section
@@ -100,8 +106,8 @@
 
 
 
-	//Custom CSS that changes using the $wp_customize variable
-	function laav_customize_css(){
+	//Custom CSS
+	function laav_customize_css_footer(){
 	?>
 		<style type="text/css">
 			
@@ -117,7 +123,7 @@
 
 	<?php 
 	}
-	add_action('wp_footer', 'laav_customize_css');
+	add_action('wp_footer', 'laav_customize_css_footer');
 
 
 
