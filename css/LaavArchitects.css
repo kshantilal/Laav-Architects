@@ -7,8 +7,8 @@
 body{
 	background-color: #2a364a;
 	color: #fff;
-	font-family: 'open-sans';
-	/*overflow: hidden;*/
+	font-family: 'Open Sans';
+	font-weight: 100;
 }
 .row{
 	margin: 0px;

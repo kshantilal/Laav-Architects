@@ -13,6 +13,14 @@
 	add_action('wp_enqueue_scripts', 'customThemeEnqueues');
 
 
+
+	function addGoogleFonts(){
+		wp_enqueue_style( 'wp-open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300', false );
+	}
+	add_action('wp_enqueue_scripts', 'addGoogleFonts');
+
+
+
 	// =============================================
 	//Header
 	// =============================================
@@ -67,7 +75,7 @@
 			'new_item'           => __( 'New Slide'),
 			'edit_item'          => __( 'Edit Slide'),
 			'view_item'          => __( 'View Slide'),
-			'all_items'          => __( 'All Slide'),
+			'all_items'          => __( 'All Slides'),
 			'search_items'       => __( 'Search Slide'),
 			'parent_item_colon'  => __( 'Parent Slide:'),
 			'not_found'          => __( 'No Slide found.'),
@@ -76,7 +84,7 @@
 
 		$args = array(
 			'labels'             => $labels,
-			'menu_icon'	     => 'dashicons-star-half',
+			'menu_icon'	         => 'dashicons-star-half',
 			'description'        => __( 'Description.'),
 			'public'             => true,
 			'publicly_queryable' => true,
@@ -96,6 +104,38 @@
 	} 
 	add_action( 'init', 'front_page_slider' );
 
+	// =============================================
+	// Cropping Images functions
+	// =============================================
+	add_theme_support( 'post_thumbnails' );
+
+	add_image_size( 'Front-page-feature', 850, 560, true);
+
+
+
+
+	// function croppedImage($wp_customize){
+	// 	$wp_customize->add_setting('cropped_image_setting', array(
+	// 		'sanitize_callback' => 'absint',
+	// 	));
+	// 	$wp_customize->add_section('cropped_image_section', array(
+	// 		'title' => __('Cropped Image', 'theme-text-domain'),
+	// 		'priority' => 1,
+	// 	));
+
+	// 	$wp_customize->add_control(new WP_Customize_Cropped_Image_Control( $wp_customize, 'cropped_image_control', array(
+	// 		'label' => __('Cropped Image', 'theme-text-domain'),
+	// 		'section' => 'cropped_image_section',
+	// 		'setting' => 'cropped_image_setting',
+	// 		'height' => 850,
+	// 		'width' => 560,
+	// 		'flex_width' => false,
+	// 		'flex_height' => false,
+	// 		'priority' => 1,
+	// 	)));
+	// }
+	// add_action('customize_register', 'croppedImage');
+ 
 
 	// =============================================
 	// Delete Comments Section 
