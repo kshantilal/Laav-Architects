@@ -27,11 +27,25 @@
 	add_action('after_setup_theme', 'customLogoSetup');
 
 	//Navigation bar
-	function customThemeSetup(){
+	function customMenuSetup(){
 		add_theme_support('menus');
 		register_nav_menu('primary', 'This is the main navigation located at the top of the page');
 	}
-	add_action('init', 'customThemeSetup');
+	add_action('init', 'customMenuSetup');
+	
+	// Register Custom Navigation Walker
+	require_once get_template_directory() . '/wp-bootstrap-navwalker.php';
+	// Bootstrap navigation
+	function bootstrap_nav(){
+		wp_nav_menu( array(
+				'theme_location'    => 'primary',
+				'depth'             => 2,
+				'container'         => 'false',
+				'menu_class'        => 'nav navbar-nav',
+				'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+				'walker'            => new wp_bootstrap_navwalker())
+		);
+	}
 
 	//Footer
 	function laavFooterText($wp_customize){

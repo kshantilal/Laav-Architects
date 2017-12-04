@@ -7,6 +7,7 @@
 body{
 	background-color: #2a364a;
 	color: #fff;
+	font-family: 'open-sans';
 	/*overflow: hidden;*/
 }
 .row{
@@ -33,7 +34,39 @@ footer p{
 ul{
 	list-style: none;
 }
+a{
+	color: #fff;
+}
 
 .menu {
     margin: 30px;
 }
+
+.nav>li>a:hover {
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+ 
+}
+
+.navbar-nav>li {
+    width: 150px;
+    text-align: center;
+}
+
+.navbar-toggle{
+	border: none;
+}
+.navbar-toggle .icon-bar{
+	background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
