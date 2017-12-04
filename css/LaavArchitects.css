@@ -61,6 +61,14 @@ a{
 .navbar-toggle .icon-bar{
 	background-color: #fff;
 }
+.carousel-inner>.item>a>img, .carousel-inner>.item>img{
+	margin: 0 auto;
+}
+
+.carousel-control.left, .carousel-control.right{
+	background-color: transparent;
+	background-image: none;
+}
 
 
 
