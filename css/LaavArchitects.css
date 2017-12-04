@@ -41,6 +41,9 @@ a{
 .menu {
     margin: 30px;
 }
+.navbar{
+	margin-bottom: 50px;
+}
 
 .nav>li>a:hover {
     text-decoration: none;
@@ -48,6 +51,7 @@ a{
     color: #fff;
     border: 1px solid #fff;
  
+
 }
 
 .navbar-nav>li {
@@ -70,7 +74,13 @@ a{
 	background-image: none;
 }
 
-
+/*@media only screen and (min-width: 1000px){
+	.navbar-nav{
+		margin-left: 20%;
+   		margin-right: 20%;
+	}
+}
+*/
 
 
 

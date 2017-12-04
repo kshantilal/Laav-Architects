@@ -12,6 +12,7 @@
 	}
 	add_action('wp_enqueue_scripts', 'customThemeEnqueues');
 
+
 	// =============================================
 	//Header
 	// =============================================
@@ -161,14 +162,16 @@
 	}
 	add_action('init', 'df_disable_comments_admin_bar');
 
+
+
 	// =============================================
 	//Footer
 	// =============================================
-	function laavFooterText($wp_customize){
+	function laav_footer_text($wp_customize){
 		//Settings
-			$wp_customize->add_setting('laavFooterText', array(
+			$wp_customize->add_setting('laav_footer_text', array(
 				'default' => 'This is your footer text',
-				'transport' => 'refesh'
+				'transport' => 'refresh'
 			));
 
 		//Section
@@ -180,15 +183,15 @@
 			$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'laav_footer_text_control', array(
 				'label' => 'Footer Text',
 				'section' => 'laav_footer_text_section',
-				'settings' => 'laavFooterText'
+				'settings' => 'laav_footer_text'
 			)));
 	}
 
-	add_action('customize_register', 'laav_Footer_Text');
+	add_action('customize_register', 'laav_footer_text');
 
 
 	// =============================================
-	//Customize Colours
+	//Customize Footer Colours
 	// =============================================
 	function laavCustomColour($wp_customize){
 		//Settings
