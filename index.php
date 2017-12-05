@@ -2,6 +2,3 @@
 
 
 <?php get_footer(); ?>
-
-	
-	
