@@ -5,7 +5,6 @@
 
 
 body{
-	background-color: #2a364a;
 	color: #fff;
 	font-family: 'Open Sans';
 	font-weight: 100;
@@ -34,29 +33,26 @@ footer p{
 ul{
 	list-style: none;
 }
-a{
-	color: #fff;
-}
+
 
 .menu {
-    margin: 30px;
+	margin: 30px;
 }
 .navbar{
 	margin-bottom: 50px;
 }
 
 .nav>li>a:hover {
-    text-decoration: none;
-    background-color: transparent;
-    color: #fff;
-    border: 1px solid #fff;
+	text-decoration: none;
+	background-color: transparent;
+	border: 1px solid #fff;
  
 
 }
 
 .navbar-nav>li {
-    width: 150px;
-    text-align: center;
+	width: 150px;
+	text-align: center;
 }
 
 .navbar-toggle{
@@ -77,10 +73,21 @@ a{
 /*@media only screen and (min-width: 1000px){
 	.navbar-nav{
 		margin-left: 20%;
-   		margin-right: 20%;
+		margin-right: 20%;
 	}
 }
 */
+/*@media (min-width: 1200px){
+.container {
+	 width: 750px; 
+}*/
+
+/*@media (min-width: 992px){
+.container {
+	 width: 750px; 
+}*/
+
+
 
 
 
