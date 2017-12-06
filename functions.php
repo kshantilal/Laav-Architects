@@ -146,6 +146,48 @@
 	} 
 	add_action( 'init', 'projectsSection' );
 
+	// =============================================
+	// Services Section
+	// =============================================
+		function servicesSection() {
+		$labels = array(
+			'name'               => _x( 'Services', 'post type general name'),
+			'singular_name'      => _x( 'Service', 'post type singular name'),
+			'menu_name'          => _x( 'Services', 'admin menu'),
+			'name_admin_bar'     => _x( 'Service', 'add new on admin bar'),
+			'add_new'            => _x( 'Add New Service', 'Service'),
+			'add_new_item'       => __( 'Add New Service'),
+			'new_item'           => __( 'New Service'),
+			'edit_item'          => __( 'Edit Services'),
+			'view_item'          => __( 'View Services'),
+			'all_items'          => __( 'All Services'),
+			'search_items'       => __( 'Search Services'),
+			'parent_item_colon'  => __( 'Parent Services:'),
+			'not_found'          => __( 'No Service found.'),
+			'not_found_in_trash' => __( 'No Service found in Trash.'),
+		);
+
+		$args = array(
+			'labels'             => $labels,
+			'menu_icon'	         => 'dashicons-groups',
+			'description'        => __( 'Description.'),
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'query_var'          => true,
+			'rewrite'            => array('slug' => 'services'),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => null,
+			'supports'           => array('title','editor', 'thumbnail', 'page-attributes')
+		);
+
+		register_post_type( 'services', $args );
+	} 
+	add_action( 'init', 'servicesSection' );
+
 
 	// =============================================
 	// Custom Fields

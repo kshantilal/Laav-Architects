@@ -46,8 +46,6 @@ ul{
 	text-decoration: none;
 	background-color: transparent;
 	border: 1px solid #fff;
- 
-
 }
 
 .navbar-nav>li {
@@ -70,22 +68,23 @@ ul{
 	background-image: none;
 }
 
-/*@media only screen and (min-width: 1000px){
-	.navbar-nav{
-		margin-left: 20%;
-		margin-right: 20%;
-	}
-}
-*/
-/*@media (min-width: 1200px){
-.container {
-	 width: 750px; 
-}*/
+/*Services*/
 
-/*@media (min-width: 992px){
-.container {
-	 width: 750px; 
-}*/
+.services{
+	text-align: center;
+}
+
+.serviceTitle{
+	margin-bottom: 35px;
+}
+
+
+/*Footer*/
+
+.footerSpacing{
+	margin-top: 100px;
+}
+
 
 
 

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 06, 2017 at 11:52 AM
+-- Generation Time: Dec 06, 2017 at 11:37 PM
 -- Server version: 5.5.57-0ubuntu0.14.04.1
 -- PHP Version: 7.1.9-1+ubuntu14.04.1+deb.sury.org+1
 
@@ -110,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `wp_laavoptions` (
   `autoload` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=320 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=329 ;
 
 --
 -- Dumping data for table `wp_laavoptions`
@@ -225,7 +225,7 @@ INSERT INTO `wp_laavoptions` (`option_id`, `option_name`, `option_value`, `autol
 (106, 'widget_tag_cloud', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (107, 'widget_nav_menu', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (108, 'widget_custom_html', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
-(109, 'cron', 'a:5:{i:1512549407;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1512549443;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1512551091;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1512590877;a:1:{s:25:"delete_expired_transients";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(109, 'cron', 'a:5:{i:1512590877;a:1:{s:25:"delete_expired_transients";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1512592607;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1512635843;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1512637491;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
 (110, 'theme_mods_twentyseventeen', 'a:2:{s:18:"custom_css_post_id";i:-1;s:16:"sidebars_widgets";a:2:{s:4:"time";i:1512032022;s:4:"data";a:4:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}s:9:"sidebar-2";a:0:{}s:9:"sidebar-3";a:0:{}}}}', 'yes'),
 (124, '_site_transient_timeout_browser_42df057b09bc3ccc5ee4daf18578b0bf', '1512635827', 'no'),
 (125, '_site_transient_browser_42df057b09bc3ccc5ee4daf18578b0bf', 'a:10:{s:4:"name";s:6:"Chrome";s:7:"version";s:12:"62.0.3202.89";s:8:"platform";s:9:"Macintosh";s:10:"update_url";s:29:"https://www.google.com/chrome";s:7:"img_src";s:43:"http://s.w.org/images/browsers/chrome.png?1";s:11:"img_src_ssl";s:44:"https://s.w.org/images/browsers/chrome.png?1";s:15:"current_version";s:2:"18";s:7:"upgrade";b:0;s:8:"insecure";b:0;s:6:"mobile";b:0;}', 'no'),
@@ -255,12 +255,12 @@ INSERT INTO `wp_laavoptions` (`option_id`, `option_name`, `option_value`, `autol
 (306, '_transient_feed_mod_d117b5738fbd35bd8c0391cda1f2b5d9', '1512504318', 'no'),
 (307, '_transient_timeout_dash_v2_b4f9b57f26a94c90aaf68ebc0a62e7a8', '1512547518', 'no'),
 (308, '_transient_dash_v2_b4f9b57f26a94c90aaf68ebc0a62e7a8', '<div class="rss-widget"><ul><li><a class=''rsswidget'' href=''https://wordpress.org/news/2017/12/the-month-in-wordpress-november-2017/''>The Month in WordPress: November 2017</a></li></ul></div><div class="rss-widget"><ul><li><a class=''rsswidget'' href=''https://heropress.com/new-sponsor-rtcamp/#utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=new-sponsor-rtcamp''>HeroPress: A New Sponsor: rtCamp</a></li><li><a class=''rsswidget'' href=''https://wptavern.com/wordcamp-us-2017-is-livestreaming-all-sessions-for-free''>WPTavern: WordCamp US 2017 is Livestreaming All Sessions for Free</a></li><li><a class=''rsswidget'' href=''https://wordpress.org/news/2017/12/the-month-in-wordpress-november-2017/''>Dev Blog: The Month in WordPress: November 2017</a></li></ul></div>', 'no'),
-(309, '_site_transient_timeout_theme_roots', '1512506228', 'no'),
-(310, '_site_transient_theme_roots', 'a:4:{s:15:"Laav-Architects";s:7:"/themes";s:13:"twentyfifteen";s:7:"/themes";s:15:"twentyseventeen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'no'),
 (312, 'widget_media_gallery', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
-(315, '_site_transient_update_core', 'O:8:"stdClass":4:{s:7:"updates";a:1:{i:0;O:8:"stdClass":10:{s:8:"response";s:6:"latest";s:8:"download";s:65:"https://downloads.wordpress.org/release/en_NZ/wordpress-4.9.1.zip";s:6:"locale";s:5:"en_NZ";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:65:"https://downloads.wordpress.org/release/en_NZ/wordpress-4.9.1.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.9.1";s:7:"version";s:5:"4.9.1";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.7";s:15:"partial_version";s:0:"";}}s:12:"last_checked";i:1512506211;s:15:"version_checked";s:5:"4.9.1";s:12:"translations";a:0:{}}', 'no'),
-(318, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1512506217;s:7:"checked";a:4:{s:15:"Laav-Architects";s:11:"0.1.2 alpha";s:13:"twentyfifteen";s:3:"1.8";s:15:"twentyseventeen";s:3:"1.3";s:13:"twentysixteen";s:3:"1.3";}s:8:"response";a:3:{s:13:"twentyfifteen";a:4:{s:5:"theme";s:13:"twentyfifteen";s:11:"new_version";s:3:"1.9";s:3:"url";s:43:"https://wordpress.org/themes/twentyfifteen/";s:7:"package";s:59:"https://downloads.wordpress.org/theme/twentyfifteen.1.9.zip";}s:15:"twentyseventeen";a:4:{s:5:"theme";s:15:"twentyseventeen";s:11:"new_version";s:3:"1.4";s:3:"url";s:45:"https://wordpress.org/themes/twentyseventeen/";s:7:"package";s:61:"https://downloads.wordpress.org/theme/twentyseventeen.1.4.zip";}s:13:"twentysixteen";a:4:{s:5:"theme";s:13:"twentysixteen";s:11:"new_version";s:3:"1.4";s:3:"url";s:43:"https://wordpress.org/themes/twentysixteen/";s:7:"package";s:59:"https://downloads.wordpress.org/theme/twentysixteen.1.4.zip";}}s:12:"translations";a:0:{}}', 'no'),
-(319, '_site_transient_update_plugins', 'O:8:"stdClass":4:{s:12:"last_checked";i:1512506215;s:8:"response";a:1:{s:19:"akismet/akismet.php";O:8:"stdClass":11:{s:2:"id";s:21:"w.org/plugins/akismet";s:4:"slug";s:7:"akismet";s:6:"plugin";s:19:"akismet/akismet.php";s:11:"new_version";s:5:"4.0.1";s:3:"url";s:38:"https://wordpress.org/plugins/akismet/";s:7:"package";s:56:"https://downloads.wordpress.org/plugin/akismet.4.0.1.zip";s:5:"icons";a:3:{s:2:"1x";s:59:"https://ps.w.org/akismet/assets/icon-128x128.png?rev=969272";s:2:"2x";s:59:"https://ps.w.org/akismet/assets/icon-256x256.png?rev=969272";s:7:"default";s:59:"https://ps.w.org/akismet/assets/icon-256x256.png?rev=969272";}s:7:"banners";a:2:{s:2:"1x";s:61:"https://ps.w.org/akismet/assets/banner-772x250.jpg?rev=479904";s:7:"default";s:61:"https://ps.w.org/akismet/assets/banner-772x250.jpg?rev=479904";}s:11:"banners_rtl";a:0:{}s:6:"tested";s:5:"4.9.1";s:13:"compatibility";O:8:"stdClass":0:{}}}s:12:"translations";a:0:{}s:9:"no_update";a:1:{s:9:"hello.php";O:8:"stdClass":9:{s:2:"id";s:25:"w.org/plugins/hello-dolly";s:4:"slug";s:11:"hello-dolly";s:6:"plugin";s:9:"hello.php";s:11:"new_version";s:3:"1.6";s:3:"url";s:42:"https://wordpress.org/plugins/hello-dolly/";s:7:"package";s:58:"https://downloads.wordpress.org/plugin/hello-dolly.1.6.zip";s:5:"icons";a:3:{s:2:"1x";s:63:"https://ps.w.org/hello-dolly/assets/icon-128x128.jpg?rev=969907";s:2:"2x";s:63:"https://ps.w.org/hello-dolly/assets/icon-256x256.jpg?rev=969907";s:7:"default";s:63:"https://ps.w.org/hello-dolly/assets/icon-256x256.jpg?rev=969907";}s:7:"banners";a:2:{s:2:"1x";s:65:"https://ps.w.org/hello-dolly/assets/banner-772x250.png?rev=478342";s:7:"default";s:65:"https://ps.w.org/hello-dolly/assets/banner-772x250.png?rev=478342";}s:11:"banners_rtl";a:0:{}}}}', 'no');
+(315, '_site_transient_update_core', 'O:8:"stdClass":4:{s:7:"updates";a:3:{i:0;O:8:"stdClass":10:{s:8:"response";s:7:"upgrade";s:8:"download";s:65:"https://downloads.wordpress.org/release/en_NZ/wordpress-4.9.1.zip";s:6:"locale";s:5:"en_NZ";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:65:"https://downloads.wordpress.org/release/en_NZ/wordpress-4.9.1.zip";s:10:"no_content";b:0;s:11:"new_bundled";b:0;s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.9.1";s:7:"version";s:5:"4.9.1";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.7";s:15:"partial_version";s:0:"";}i:1;O:8:"stdClass":10:{s:8:"response";s:7:"upgrade";s:8:"download";s:59:"https://downloads.wordpress.org/release/wordpress-4.9.1.zip";s:6:"locale";s:5:"en_US";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:59:"https://downloads.wordpress.org/release/wordpress-4.9.1.zip";s:10:"no_content";s:70:"https://downloads.wordpress.org/release/wordpress-4.9.1-no-content.zip";s:11:"new_bundled";s:71:"https://downloads.wordpress.org/release/wordpress-4.9.1-new-bundled.zip";s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.9.1";s:7:"version";s:5:"4.9.1";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.7";s:15:"partial_version";s:0:"";}i:2;O:8:"stdClass":11:{s:8:"response";s:10:"autoupdate";s:8:"download";s:59:"https://downloads.wordpress.org/release/wordpress-4.9.1.zip";s:6:"locale";s:5:"en_US";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:59:"https://downloads.wordpress.org/release/wordpress-4.9.1.zip";s:10:"no_content";s:70:"https://downloads.wordpress.org/release/wordpress-4.9.1-no-content.zip";s:11:"new_bundled";s:71:"https://downloads.wordpress.org/release/wordpress-4.9.1-new-bundled.zip";s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.9.1";s:7:"version";s:5:"4.9.1";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.7";s:15:"partial_version";s:0:"";s:9:"new_files";s:1:"1";}}s:12:"last_checked";i:1512549511;s:15:"version_checked";s:5:"4.8.4";s:12:"translations";a:0:{}}', 'no'),
+(324, '_site_transient_timeout_theme_roots', '1512551312', 'no'),
+(325, '_site_transient_theme_roots', 'a:4:{s:15:"Laav-Architects";s:7:"/themes";s:13:"twentyfifteen";s:7:"/themes";s:15:"twentyseventeen";s:7:"/themes";s:13:"twentysixteen";s:7:"/themes";}', 'no'),
+(326, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1512549517;s:7:"checked";a:4:{s:15:"Laav-Architects";s:11:"0.1.2 alpha";s:13:"twentyfifteen";s:3:"1.8";s:15:"twentyseventeen";s:3:"1.3";s:13:"twentysixteen";s:3:"1.3";}s:8:"response";a:3:{s:13:"twentyfifteen";a:4:{s:5:"theme";s:13:"twentyfifteen";s:11:"new_version";s:3:"1.9";s:3:"url";s:43:"https://wordpress.org/themes/twentyfifteen/";s:7:"package";s:59:"https://downloads.wordpress.org/theme/twentyfifteen.1.9.zip";}s:15:"twentyseventeen";a:4:{s:5:"theme";s:15:"twentyseventeen";s:11:"new_version";s:3:"1.4";s:3:"url";s:45:"https://wordpress.org/themes/twentyseventeen/";s:7:"package";s:61:"https://downloads.wordpress.org/theme/twentyseventeen.1.4.zip";}s:13:"twentysixteen";a:4:{s:5:"theme";s:13:"twentysixteen";s:11:"new_version";s:3:"1.4";s:3:"url";s:43:"https://wordpress.org/themes/twentysixteen/";s:7:"package";s:59:"https://downloads.wordpress.org/theme/twentysixteen.1.4.zip";}}s:12:"translations";a:0:{}}', 'no'),
+(327, '_site_transient_update_plugins', 'O:8:"stdClass":4:{s:12:"last_checked";i:1512549515;s:8:"response";a:1:{s:19:"akismet/akismet.php";O:8:"stdClass":11:{s:2:"id";s:21:"w.org/plugins/akismet";s:4:"slug";s:7:"akismet";s:6:"plugin";s:19:"akismet/akismet.php";s:11:"new_version";s:5:"4.0.1";s:3:"url";s:38:"https://wordpress.org/plugins/akismet/";s:7:"package";s:56:"https://downloads.wordpress.org/plugin/akismet.4.0.1.zip";s:5:"icons";a:3:{s:2:"1x";s:59:"https://ps.w.org/akismet/assets/icon-128x128.png?rev=969272";s:2:"2x";s:59:"https://ps.w.org/akismet/assets/icon-256x256.png?rev=969272";s:7:"default";s:59:"https://ps.w.org/akismet/assets/icon-256x256.png?rev=969272";}s:7:"banners";a:2:{s:2:"1x";s:61:"https://ps.w.org/akismet/assets/banner-772x250.jpg?rev=479904";s:7:"default";s:61:"https://ps.w.org/akismet/assets/banner-772x250.jpg?rev=479904";}s:11:"banners_rtl";a:0:{}s:6:"tested";s:5:"4.9.1";s:13:"compatibility";O:8:"stdClass":0:{}}}s:12:"translations";a:0:{}s:9:"no_update";a:1:{s:9:"hello.php";O:8:"stdClass":9:{s:2:"id";s:25:"w.org/plugins/hello-dolly";s:4:"slug";s:11:"hello-dolly";s:6:"plugin";s:9:"hello.php";s:11:"new_version";s:3:"1.6";s:3:"url";s:42:"https://wordpress.org/plugins/hello-dolly/";s:7:"package";s:58:"https://downloads.wordpress.org/plugin/hello-dolly.1.6.zip";s:5:"icons";a:3:{s:2:"1x";s:63:"https://ps.w.org/hello-dolly/assets/icon-128x128.jpg?rev=969907";s:2:"2x";s:63:"https://ps.w.org/hello-dolly/assets/icon-256x256.jpg?rev=969907";s:7:"default";s:63:"https://ps.w.org/hello-dolly/assets/icon-256x256.jpg?rev=969907";}s:7:"banners";a:2:{s:2:"1x";s:65:"https://ps.w.org/hello-dolly/assets/banner-772x250.png?rev=478342";s:7:"default";s:65:"https://ps.w.org/hello-dolly/assets/banner-772x250.png?rev=478342";}s:11:"banners_rtl";a:0:{}}}}', 'no');
 
 -- --------------------------------------------------------
 
@@ -276,7 +276,7 @@ CREATE TABLE IF NOT EXISTS `wp_laavpostmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=265 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=296 ;
 
 --
 -- Dumping data for table `wp_laavpostmeta`
@@ -378,7 +378,7 @@ INSERT INTO `wp_laavpostmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) V
 (93, 33, '_menu_item_xfn', ''),
 (94, 33, '_menu_item_url', ''),
 (95, 35, '_edit_last', '1'),
-(96, 35, '_edit_lock', '1512368132:1'),
+(96, 35, '_edit_lock', '1512554670:1'),
 (97, 36, '_menu_item_type', 'post_type'),
 (98, 36, '_menu_item_menu_item_parent', '0'),
 (99, 36, '_menu_item_object_id', '35'),
@@ -406,7 +406,7 @@ INSERT INTO `wp_laavpostmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) V
 (130, 45, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
 (131, 45, '_menu_item_xfn', ''),
 (132, 45, '_menu_item_url', ''),
-(133, 44, '_edit_lock', '1512503272:1'),
+(133, 44, '_edit_lock', '1512544702:1'),
 (134, 2, '_wp_trash_meta_status', 'publish'),
 (135, 2, '_wp_trash_meta_time', '1512369975'),
 (136, 2, '_wp_desired_post_slug', 'sample-page'),
@@ -415,7 +415,7 @@ INSERT INTO `wp_laavpostmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) V
 (139, 48, '_wp_trash_meta_status', 'draft'),
 (140, 48, '_wp_trash_meta_time', '1512370889'),
 (141, 48, '_wp_desired_post_slug', ''),
-(142, 1, '_edit_lock', '1512467563:1'),
+(142, 1, '_edit_lock', '1512555852:1'),
 (147, 52, '_edit_last', '1'),
 (148, 52, '_edit_lock', '1512426987:1'),
 (158, 57, '_wp_trash_meta_status', 'publish'),
@@ -453,7 +453,7 @@ INSERT INTO `wp_laavpostmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) V
 (203, 75, '_wp_trash_meta_time', '1512458823'),
 (204, 75, '_wp_desired_post_slug', 'slide-5'),
 (205, 82, '_edit_last', '1'),
-(206, 82, '_edit_lock', '1512502504:1'),
+(206, 82, '_edit_lock', '1512551817:1'),
 (207, 83, '_wp_attached_file', '2017/12/40.png'),
 (208, 83, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:853;s:6:"height";i:570;s:4:"file";s:14:"2017/12/40.png";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:14:"40-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:14:"40-300x200.png";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:9:"image/png";}s:12:"medium_large";a:4:{s:4:"file";s:14:"40-768x513.png";s:5:"width";i:768;s:6:"height";i:513;s:9:"mime-type";s:9:"image/png";}s:18:"Front-page-feature";a:4:{s:4:"file";s:14:"40-850x560.png";s:5:"width";i:850;s:6:"height";i:560;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
 (209, 82, '_thumbnail_id', '83'),
@@ -507,8 +507,39 @@ INSERT INTO `wp_laavpostmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) V
 (257, 111, '_wp_trash_meta_time', '1512505017'),
 (258, 111, '_wp_desired_post_slug', 'test2'),
 (259, 120, '_edit_last', '1'),
-(260, 120, '_edit_lock', '1512514181:1'),
-(261, 120, '_thumbnail_id', '89');
+(260, 120, '_edit_lock', '1512554391:1'),
+(261, 120, '_thumbnail_id', '89'),
+(265, 121, '_edit_last', '1'),
+(266, 121, '_edit_lock', '1512549148:1'),
+(267, 122, '_wp_attached_file', '2017/12/39-1.png'),
+(268, 122, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:852;s:6:"height";i:568;s:4:"file";s:16:"2017/12/39-1.png";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:16:"39-1-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:16:"39-1-300x200.png";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:9:"image/png";}s:12:"medium_large";a:4:{s:4:"file";s:16:"39-1-768x512.png";s:5:"width";i:768;s:6:"height";i:512;s:9:"mime-type";s:9:"image/png";}s:18:"Front-page-feature";a:4:{s:4:"file";s:16:"39-1-850x560.png";s:5:"width";i:850;s:6:"height";i:560;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(269, 121, '_thumbnail_id', '122'),
+(270, 123, '_edit_last', '1'),
+(271, 123, '_edit_lock', '1512549162:1'),
+(272, 124, '_wp_attached_file', '2017/12/38-1.png'),
+(273, 124, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:849;s:6:"height";i:569;s:4:"file";s:16:"2017/12/38-1.png";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:16:"38-1-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:16:"38-1-300x201.png";s:5:"width";i:300;s:6:"height";i:201;s:9:"mime-type";s:9:"image/png";}s:12:"medium_large";a:4:{s:4:"file";s:16:"38-1-768x515.png";s:5:"width";i:768;s:6:"height";i:515;s:9:"mime-type";s:9:"image/png";}s:18:"Front-page-feature";a:4:{s:4:"file";s:16:"38-1-849x560.png";s:5:"width";i:849;s:6:"height";i:560;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(274, 123, '_thumbnail_id', '124'),
+(275, 125, '_edit_last', '1'),
+(276, 125, '_edit_lock', '1512555927:1'),
+(277, 126, '_wp_attached_file', '2017/12/37-1.png'),
+(278, 126, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:852;s:6:"height";i:569;s:4:"file";s:16:"2017/12/37-1.png";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:16:"37-1-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:16:"37-1-300x200.png";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:9:"image/png";}s:12:"medium_large";a:4:{s:4:"file";s:16:"37-1-768x513.png";s:5:"width";i:768;s:6:"height";i:513;s:9:"mime-type";s:9:"image/png";}s:18:"Front-page-feature";a:4:{s:4:"file";s:16:"37-1-850x560.png";s:5:"width";i:850;s:6:"height";i:560;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(279, 125, '_thumbnail_id', '126'),
+(280, 125, 'ProjectNumber', '40'),
+(281, 123, 'ProjectNumber', '39'),
+(282, 121, 'ProjectNumber', '38'),
+(283, 120, 'ProjectNumber', '37'),
+(284, 120, '_wp_old_slug', '120'),
+(285, 35, '_wp_page_template', 'page-services.php'),
+(286, 128, '_edit_last', '1'),
+(287, 128, '_edit_lock', '1512555827:1'),
+(288, 129, '_wp_attached_file', '2017/12/residential.png'),
+(289, 129, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:256;s:6:"height";i:256;s:4:"file";s:23:"2017/12/residential.png";s:5:"sizes";a:1:{s:9:"thumbnail";a:4:{s:4:"file";s:23:"residential-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(290, 128, '_thumbnail_id', '129'),
+(291, 130, '_edit_last', '1'),
+(292, 130, '_edit_lock', '1512555573:1'),
+(293, 131, '_wp_attached_file', '2017/12/sofa.png'),
+(294, 131, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:626;s:6:"height";i:626;s:4:"file";s:16:"2017/12/sofa.png";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:16:"sofa-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:16:"sofa-300x300.png";s:5:"width";i:300;s:6:"height";i:300;s:9:"mime-type";s:9:"image/png";}s:18:"Front-page-feature";a:4:{s:4:"file";s:16:"sofa-626x560.png";s:5:"width";i:626;s:6:"height";i:560;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(295, 130, '_thumbnail_id', '131');
 
 -- --------------------------------------------------------
 
@@ -545,7 +576,7 @@ CREATE TABLE IF NOT EXISTS `wp_laavposts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=121 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=132 ;
 
 --
 -- Dumping data for table `wp_laavposts`
@@ -586,7 +617,7 @@ INSERT INTO `wp_laavposts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `
 (32, 1, '2017-12-03 09:05:47', '2017-12-03 09:05:47', 'This is the projects page', 'PROJECTS', '', 'publish', 'closed', 'closed', '', 'projects', '', '', '2017-12-05 20:07:57', '2017-12-05 20:07:57', '', 0, 'http://192.168.33.10/?page_id=32', 0, 'page', '', 0),
 (33, 1, '2017-12-03 09:05:47', '2017-12-03 09:05:47', ' ', '', '', 'publish', 'closed', 'closed', '', '33', '', '', '2017-12-04 07:46:48', '2017-12-04 07:46:48', '', 0, 'http://192.168.33.10/2017/12/03/33/', 1, 'nav_menu_item', '', 0),
 (34, 1, '2017-12-03 09:05:47', '2017-12-03 09:05:47', 'This is the projects page', 'Projects', '', 'inherit', 'closed', 'closed', '', '32-revision-v1', '', '', '2017-12-03 09:05:47', '2017-12-03 09:05:47', '', 32, 'http://192.168.33.10/2017/12/03/32-revision-v1/', 0, 'revision', '', 0),
-(35, 1, '2017-12-03 09:06:10', '2017-12-03 09:06:10', 'This is the services page.', 'SERVICES', '', 'publish', 'closed', 'closed', '', 'services', '', '', '2017-12-04 06:17:53', '2017-12-04 06:17:53', '', 0, 'http://192.168.33.10/?page_id=35', 0, 'page', '', 0),
+(35, 1, '2017-12-03 09:06:10', '2017-12-03 09:06:10', 'This is the services page.', 'SERVICES', '', 'publish', 'closed', 'closed', '', 'services', '', '', '2017-12-06 10:06:52', '2017-12-06 10:06:52', '', 0, 'http://192.168.33.10/?page_id=35', 0, 'page', '', 0),
 (36, 1, '2017-12-03 09:06:10', '2017-12-03 09:06:10', ' ', '', '', 'publish', 'closed', 'closed', '', '36', '', '', '2017-12-04 07:46:48', '2017-12-04 07:46:48', '', 0, 'http://192.168.33.10/2017/12/03/36/', 2, 'nav_menu_item', '', 0),
 (37, 1, '2017-12-03 09:06:10', '2017-12-03 09:06:10', 'This is the services page.', 'Services', '', 'inherit', 'closed', 'closed', '', '35-revision-v1', '', '', '2017-12-03 09:06:10', '2017-12-03 09:06:10', '', 35, 'http://192.168.33.10/2017/12/03/35-revision-v1/', 0, 'revision', '', 0),
 (39, 1, '2017-12-04 06:17:44', '2017-12-04 06:17:44', 'This is the projects page', 'PROJECTS', '', 'inherit', 'closed', 'closed', '', '32-revision-v1', '', '', '2017-12-04 06:17:44', '2017-12-04 06:17:44', '', 32, 'http://192.168.33.10/2017/12/04/32-revision-v1/', 0, 'revision', '', 0),
@@ -657,7 +688,18 @@ INSERT INTO `wp_laavposts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `
 (117, 1, '2017-12-05 20:24:56', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2017-12-05 20:24:56', '0000-00-00 00:00:00', '', 0, 'http://192.168.33.10/?post_type=projects&p=117', 0, 'projects', '', 0),
 (118, 1, '2017-12-05 20:30:58', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2017-12-05 20:30:58', '0000-00-00 00:00:00', '', 0, 'http://192.168.33.10/?post_type=projects&p=118', 0, 'projects', '', 0),
 (119, 1, '2017-12-05 20:31:21', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2017-12-05 20:31:21', '0000-00-00 00:00:00', '', 0, 'http://192.168.33.10/?post_type=projects&p=119', 0, 'projects', '', 0),
-(120, 1, '2017-12-05 20:33:51', '2017-12-05 20:33:51', 'New post', 'House of Photographer', '', 'publish', 'closed', 'closed', '', '120', '', '', '2017-12-05 21:02:02', '2017-12-05 21:02:02', '', 0, 'http://192.168.33.10/?post_type=projects&#038;p=120', 0, 'projects', '', 0);
+(120, 1, '2017-12-05 20:33:51', '2017-12-05 20:33:51', 'This is the house photographer page with content', 'House of Photographer', '', 'publish', 'closed', 'closed', '', 'house-of-photographer', '', '', '2017-12-06 08:53:21', '2017-12-06 08:53:21', '', 0, 'http://192.168.33.10/?post_type=projects&#038;p=120', 0, 'projects', '', 0),
+(121, 1, '2017-12-06 05:36:13', '2017-12-06 05:36:13', '', 'House of scenes', '', 'publish', 'closed', 'closed', '', 'house-of-scenes', '', '', '2017-12-06 07:08:23', '2017-12-06 07:08:23', '', 0, 'http://192.168.33.10/?post_type=projects&#038;p=121', 0, 'projects', '', 0),
+(122, 1, '2017-12-06 05:35:59', '2017-12-06 05:35:59', '', '#39', '', 'inherit', 'closed', 'closed', '', '39-2', '', '', '2017-12-06 05:35:59', '2017-12-06 05:35:59', '', 121, 'http://192.168.33.10/wp-content/uploads/2017/12/39-1.png', 0, 'attachment', 'image/png', 0),
+(123, 1, '2017-12-06 05:42:39', '2017-12-06 05:42:39', '', 'Courtyard House', '', 'publish', 'closed', 'closed', '', 'courtyard-house', '', '', '2017-12-06 07:08:07', '2017-12-06 07:08:07', '', 0, 'http://192.168.33.10/?post_type=projects&#038;p=123', 0, 'projects', '', 0),
+(124, 1, '2017-12-06 05:42:30', '2017-12-06 05:42:30', '', '#38', '', 'inherit', 'closed', 'closed', '', '38-2', '', '', '2017-12-06 05:42:30', '2017-12-06 05:42:30', '', 123, 'http://192.168.33.10/wp-content/uploads/2017/12/38-1.png', 0, 'attachment', 'image/png', 0),
+(125, 1, '2017-12-06 05:49:32', '2017-12-06 05:49:32', '', 'Framing house', '', 'publish', 'closed', 'closed', '', 'framing-house', '', '', '2017-12-06 07:07:46', '2017-12-06 07:07:46', '', 0, 'http://192.168.33.10/?post_type=projects&#038;p=125', 0, 'projects', '', 0),
+(126, 1, '2017-12-06 05:49:18', '2017-12-06 05:49:18', '', '#37', '', 'inherit', 'closed', 'closed', '', '37-2', '', '', '2017-12-06 05:49:18', '2017-12-06 05:49:18', '', 125, 'http://192.168.33.10/wp-content/uploads/2017/12/37-1.png', 0, 'attachment', 'image/png', 0),
+(127, 1, '2017-12-06 07:08:04', '2017-12-06 07:08:04', '', 'Courtyard House', '', 'inherit', 'closed', 'closed', '', '123-autosave-v1', '', '', '2017-12-06 07:08:04', '2017-12-06 07:08:04', '', 123, 'http://192.168.33.10/2017/12/06/123-autosave-v1/', 0, 'revision', '', 0),
+(128, 1, '2017-12-06 10:16:34', '2017-12-06 10:16:34', 'We make sure that we understand both what drives your business and your budget and with these primary factors in mind, we deliver top residential design. Our residential architectural design will add value to your business’ brand and the workings of your business.', 'RESIDENTIAL', '', 'publish', 'closed', 'closed', '', 'residential', '', '', '2017-12-06 10:22:08', '2017-12-06 10:22:08', '', 0, 'http://192.168.33.10/?post_type=services&#038;p=128', 0, 'services', '', 0),
+(129, 1, '2017-12-06 10:16:25', '2017-12-06 10:16:25', '', 'residential', '', 'inherit', 'closed', 'closed', '', 'residential', '', '', '2017-12-06 10:16:25', '2017-12-06 10:16:25', '', 128, 'http://192.168.33.10/wp-content/uploads/2017/12/residential.png', 0, 'attachment', 'image/png', 0),
+(130, 1, '2017-12-06 10:21:43', '2017-12-06 10:21:43', 'Our design services cover a broad spectrum, from private residences to commercial spaces.\r\nWhether you are approaching a new build, a renovation, or looking to refresh your existing furnishings - our team can take on the design process', 'INTERIOR DESIGN', '', 'publish', 'closed', 'closed', '', 'interior-design', '', '', '2017-12-06 10:21:43', '2017-12-06 10:21:43', '', 0, 'http://192.168.33.10/?post_type=services&#038;p=130', 0, 'services', '', 0),
+(131, 1, '2017-12-06 10:21:40', '2017-12-06 10:21:40', '', 'sofa', '', 'inherit', 'closed', 'closed', '', 'sofa', '', '', '2017-12-06 10:21:40', '2017-12-06 10:21:40', '', 130, 'http://192.168.33.10/wp-content/uploads/2017/12/sofa.png', 0, 'attachment', 'image/png', 0);
 
 -- --------------------------------------------------------
 
@@ -764,7 +806,7 @@ CREATE TABLE IF NOT EXISTS `wp_laavusermeta` (
   PRIMARY KEY (`umeta_id`),
   KEY `user_id` (`user_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=40 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=42 ;
 
 --
 -- Dumping data for table `wp_laavusermeta`
@@ -789,7 +831,7 @@ INSERT INTO `wp_laavusermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) 
 (17, 1, 'wp_laavuser-settings-time', '1512506693'),
 (18, 1, 'wp_laavdashboard_quick_press_last_post_id', '3'),
 (19, 1, 'community-events-location', 'a:1:{s:2:"ip";s:12:"192.168.33.0";}'),
-(21, 1, 'session_tokens', 'a:2:{s:64:"d69a4aae1200b95767e8e9760715c0b62b2f9f5448f20b7494aafe4f0988de89";a:4:{s:10:"expiration";i:1512589967;s:2:"ip";s:12:"192.168.33.1";s:2:"ua";s:120:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36";s:5:"login";i:1512417167;}s:64:"58d591e215f7cb9930758e07da5b3a5c38656c5645a21d6887a65b6c3973eb7e";a:4:{s:10:"expiration";i:1512631600;s:2:"ip";s:12:"192.168.33.1";s:2:"ua";s:120:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36";s:5:"login";i:1512458800;}}'),
+(21, 1, 'session_tokens', 'a:3:{s:64:"d69a4aae1200b95767e8e9760715c0b62b2f9f5448f20b7494aafe4f0988de89";a:4:{s:10:"expiration";i:1512589967;s:2:"ip";s:12:"192.168.33.1";s:2:"ua";s:120:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36";s:5:"login";i:1512417167;}s:64:"58d591e215f7cb9930758e07da5b3a5c38656c5645a21d6887a65b6c3973eb7e";a:4:{s:10:"expiration";i:1512631600;s:2:"ip";s:12:"192.168.33.1";s:2:"ua";s:120:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36";s:5:"login";i:1512458800;}s:64:"153e3f6a804bfb79831a75d3073756db9b135037c869bcd8d74fc89a9127d988";a:4:{s:10:"expiration";i:1512718000;s:2:"ip";s:12:"192.168.33.1";s:2:"ua";s:120:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36";s:5:"login";i:1512545200;}}'),
 (22, 1, 'managenav-menuscolumnshidden', 'a:5:{i:0;s:11:"link-target";i:1;s:11:"css-classes";i:2;s:3:"xfn";i:3;s:11:"description";i:4;s:15:"title-attribute";}'),
 (23, 1, 'metaboxhidden_nav-menus', 'a:1:{i:0;s:12:"add-post_tag";}'),
 (24, 1, 'nav_menu_recently_edited', '2'),
@@ -804,10 +846,12 @@ INSERT INTO `wp_laavusermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) 
 (33, 1, 'edit_slider_per_page', '10'),
 (34, 1, 'closedpostboxes_programmes', 'a:0:{}'),
 (35, 1, 'metaboxhidden_programmes', 'a:1:{i:0;s:7:"slugdiv";}'),
-(36, 1, 'meta-box-order_projects', 'a:3:{s:4:"side";s:23:"submitdiv,pageparentdiv";s:6:"normal";s:29:"slugdiv,postimagediv,projects";s:8:"advanced";s:0:"";}'),
+(36, 1, 'meta-box-order_projects', 'a:3:{s:4:"side";s:23:"submitdiv,pageparentdiv";s:6:"normal";s:29:"slugdiv,projects,postimagediv";s:8:"advanced";s:0:"";}'),
 (37, 1, 'screen_layout_projects', '2'),
-(38, 1, 'closedpostboxes_projects', 'a:1:{i:0;s:8:"projects";}'),
-(39, 1, 'metaboxhidden_projects', 'a:1:{i:0;s:7:"slugdiv";}');
+(38, 1, 'closedpostboxes_projects', 'a:0:{}'),
+(39, 1, 'metaboxhidden_projects', 'a:1:{i:0;s:7:"slugdiv";}'),
+(40, 1, 'closedpostboxes_post', 'a:0:{}'),
+(41, 1, 'metaboxhidden_post', 'a:5:{i:0;s:11:"postexcerpt";i:1;s:10:"postcustom";i:2;s:11:"commentsdiv";i:3;s:7:"slugdiv";i:4;s:9:"authordiv";}');
 
 -- --------------------------------------------------------
 
