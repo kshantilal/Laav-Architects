@@ -157,13 +157,13 @@
 		'location' => 'normal',
 		'priority' => 'low',
 		'fields' => array(
-			'Project Number' => array(
+			'ProjectNumber' => array(
 				'type' => 'number'
 			)
 		)
 	)
 	);
-	add_action( 'admin_init', 'add_post_format_metabox' );
+	
 	function add_post_format_metabox() {
 		global $metaboxes;
 		if ( ! empty( $metaboxes ) ) {
@@ -172,6 +172,9 @@
 			}
 		}
 	}
+
+	add_action( 'admin_init', 'add_post_format_metabox' );
+
 	function show_metaboxes( $post, $args ) {
 		global $metaboxes;
 		$custom = get_post_custom( $post->ID );
@@ -181,9 +184,9 @@
 			foreach ( $fields as $id => $field ) {
 				switch ( $field['type'] ) {
 					default:
-					case "text":
-						$output .= '<label for="' . $id . '">' . $field['title'] . '</label><input class="customInput" id="' . $id . '" type="text" name="' . $id . '" value="' . $custom[$id][0] . '" style="width: 100%;" />';
-						break;
+					// case "text":
+					// 	$output .= '<label for="' . $id . '">' . $field['title'] . '</label><input class="customInput" id="' . $id . '" type="text" name="' . $id . '" value="' . $custom[$id][0] . '" style="width: 100%;" />';
+					// 	break;
 					case "number":
 						$output .= '<label for="' . $id . '">' . $field['title'] . '</label><input class="customInput" id="' . $id . '" type="number" name="' . $id . '" value="' . $custom[$id][0] . '" style="width: 100%;" />';
 					break;
@@ -222,8 +225,6 @@
 			}
 		}
 	}
-
-
 
 
 	// =============================================

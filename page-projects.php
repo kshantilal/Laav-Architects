@@ -7,7 +7,6 @@
  <?php get_header(); ?>
  	<div class="container">
  		<div class="row">
- 			<div class="col-md-3">
  			<?php 
  				$arg = array(
  					'post_type' => 'projects',
@@ -18,14 +17,15 @@
 
  			 <?php if($projectPosts->have_posts()): ?>
  			 	<?php while($projectPosts->have_posts()): $projectPosts->the_post(); ?>
- 			 		<?php the_post_thumbnail('medium'); ?>
- 			 		<p>#<?php echo get_post_meta($post->ID, 'projects', true); ?></p>
- 			 		<h4><?php the_title();?></h4>
- 					<p><?php the_content(); ?></p>
+ 			 		<div class="col-md-4">
+ 			 			<a href="<?php echo esc_url(get_permalink()); ?>">
+	 			 			<?php the_post_thumbnail('medium'); ?>
+	 			 			<h3>#<?php echo get_post_meta($post->ID, 'ProjectNumber', true); ?></h3>
+	 			 			<h5><?php the_title();?></h5>
+ 			 			</a>
+ 			 		</div>
  			 	<?php endwhile; ?>
  			 <?php endif; ?>
-
- 			</div>
  		</div>
  	</div>
 
