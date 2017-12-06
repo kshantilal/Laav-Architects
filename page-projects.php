@@ -18,7 +18,7 @@
  			 <?php if($projectPosts->have_posts()): ?>
  			 	<?php while($projectPosts->have_posts()): $projectPosts->the_post(); ?>
  			 		<div class="col-md-4">
- 			 			<a href="<?php echo esc_url(get_permalink()); ?>">
+ 			 			<a class="permalink" href="<?php echo(get_permalink()); ?>">
 				 			<?php the_post_thumbnail('medium'); ?>
 				 			<h3>#<?php echo get_post_meta($post->ID, 'ProjectNumber', true); ?></h3>
 				 			<h5><?php the_title();?></h5>

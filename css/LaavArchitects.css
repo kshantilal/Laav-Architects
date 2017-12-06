@@ -27,6 +27,11 @@ footer p{
 	padding: 5%;
 	text-align: center;
 }
+a.permalink !important{
+	color: #fff;
+}
+
+
 
 
 /*Navigation*/

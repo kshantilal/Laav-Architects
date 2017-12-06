@@ -17,17 +17,14 @@
  			 <?php if($services->have_posts()): ?>
  			 	<?php while($services->have_posts()) : $services->the_post();?>
  			 		<div class="col-md-4 services">
- 			 			<h2 class="serviceTitle"><?php the_title();?></h2>
- 			 			<?php the_post_thumbnail('thumbnail'); ?>
- 			 			<p><?php the_content(); ?></p>	
+ 			 			<a class="permalink" href="<?php echo(get_permalink()); ?>">
+	 			 			<h2 class="serviceTitle"><?php the_title();?></h2>
+	 			 			<?php the_post_thumbnail('thumbnail'); ?>
+	 			 			<p><?php the_content(); ?></p>
+ 			 			</a>
  			 		</div>
  			 	<?php endwhile ?>
  			 <?php endif; ?>
-
-
-
-
-
  		</div>
  	</div>
 

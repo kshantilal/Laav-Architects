@@ -1,18 +1,17 @@
 <?php get_header(); ?>
+	<?php get_header(); ?>
 	<div class="container">
 		<div class="row">
-		<h1>hello</h1>
 			<?php if(have_posts()): ?>
 				<?php while(have_posts()): the_post(); ?>
 
 
 					<div class="col-md-6">
-						<?php the_title(); ?>
-						<?php the_post_thumbnail('large'); ?>
+						<h1 class="serviceTitle"><?php the_title(); ?></h1>
+						<?php the_post_thumbnail('medium'); ?>
 					</div>
 					<div class="col-md-6">
 						<?php the_content(); ?>
-						<?php the_terms( $post->ID, 'category', 'categories: ', ' / ' ); ?>
 
 					</div>
 
@@ -22,4 +21,6 @@
 
 		</div>
 	</div>
+
+
 <?php get_footer(); ?>
