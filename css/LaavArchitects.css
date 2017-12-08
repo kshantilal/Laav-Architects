@@ -81,6 +81,11 @@ ul{
 
 .serviceTitle{
 	margin-bottom: 35px;
+	text-align: center;
+}
+.singleImage img{
+	display: block;
+	margin: 0 auto;
 }
 
 

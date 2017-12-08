@@ -23,6 +23,8 @@
 				 			<h3>#<?php echo get_post_meta($post->ID, 'ProjectNumber', true); ?></h3>
 				 			<h5><?php the_title();?></h5>
  			 			</a>
+
+
  			 		</div>
  			 	<?php endwhile; ?>
  			 <?php endif; ?>

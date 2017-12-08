@@ -190,22 +190,64 @@
 
 
 	// =============================================
-	// Custom Fields
+	// Custom Field for Title
 	// =============================================
 	$metaboxes = array(
 	'projects' => array(
-		'title' => __('Project Number'),
+		'title' => __('Custom Fields'),
 		'applicableto' => 'projects',
 		'location' => 'normal',
 		'priority' => 'low',
 		'fields' => array(
 			'ProjectNumber' => array(
+				'title' => 'Project number',
 				'type' => 'number'
-			)
+			),
+			'ImageOne' => array(
+				'title' => 'Image One',
+				'desc' => 'Upload an image',
+				'id' => $prefix . 'single_image1',
+				'type' => 'file',
+				// 'allow' => array( 'url', 'attachment' ),// limit to just attachments with array( 'attachment' )
+				'preview_size' => 'thumbnail', // Image size to use when previewing in the admin.
+ 			),
+ 			// 'ImageTwo' => array(
+				// 'title' => 'Image Two',
+				// 'desc' => 'Upload an image',
+				// 'id' => $prefix . 'single_image2',
+				// 'type' => 'file',
+				// 'allow' => array( 'url', 'attachment' ),// limit to just attachments with array( 'attachment' )
+				// 'preview_size' => 'thumbnail', // Image size to use when previewing in the admin.
+ 			// ),
+ 			// 'ImageThree' => array(
+				// 'title' => 'Image Three',
+				// 'desc' => 'Upload an image',
+				// 'id' => $prefix . 'single_image3',
+				// 'type' => 'file',
+				// 'allow' => array( 'url', 'attachment' ),// limit to just attachments with array( 'attachment' )
+				// 'preview_size' => 'thumbnail', // Image size to use when previewing in the admin.
+ 			// ),
+ 			// 'ImageFour' => array(
+				// 'title' => 'Image Four',
+				// 'desc' => 'Upload an image',
+				// 'id' => $prefix . 'single_image4',
+				// 'type' => 'file',
+				// 'allow' => array( 'url', 'attachment' ),// limit to just attachments with array( 'attachment' )
+				// 'preview_size' => 'thumbnail', // Image size to use when previewing in the admin.
+ 			// ),
+ 			// 'ImageFive' => array(
+				// 'title' => 'Image Five',
+				// 'desc' => 'Upload an image',
+				// 'id' => $prefix . 'single_image4',
+				// 'type' => 'file',
+				// 'allow' => array( 'url', 'attachment' ),// limit to just attachments with array( 'attachment' )
+				// 'preview_size' => 'thumbnail', // Image size to use when previewing in the admin.
+ 			// ),
 		)
 	)
 	);
 	
+
 	function add_post_format_metabox() {
 		global $metaboxes;
 		if ( ! empty( $metaboxes ) ) {
@@ -222,15 +264,16 @@
 		$custom = get_post_custom( $post->ID );
 		$fields = $tabs = $metaboxes[$args['id']]['fields'];
 		$output = '<input type="hidden" name="post_format_meta_box_nonce" value="' . wp_create_nonce( basename( __FILE__ ) ) . '" />';
+
 		if ( sizeof( $fields ) ) {
 			foreach ( $fields as $id => $field ) {
 				switch ( $field['type'] ) {
 					default:
-					// case "text":
-					// 	$output .= '<label for="' . $id . '">' . $field['title'] . '</label><input class="customInput" id="' . $id . '" type="text" name="' . $id . '" value="' . $custom[$id][0] . '" style="width: 100%;" />';
-					// 	break;
 					case "number":
 						$output .= '<label for="' . $id . '">' . $field['title'] . '</label><input class="customInput" id="' . $id . '" type="number" name="' . $id . '" value="' . $custom[$id][0] . '" style="width: 100%;" />';
+					break;
+					case "file":
+						$output .= '<label for="' . $id . '">' . $field['title'] . '</label><input class="customInput" id="' . $id . '" type="file" name="' . $id . '" value="' . $custom[$id][0] . '" style="width: 100%;" />';
 					break;
 				}
 			}
@@ -267,6 +310,8 @@
 			}
 		}
 	}
+
+	
 
 
 	// =============================================
@@ -476,9 +521,6 @@
 	<?php 
 	}
 	add_action('wp_head', 'laav_customize_css_navigation');
-
-
-
 
 
 
