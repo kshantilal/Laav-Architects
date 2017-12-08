@@ -27,11 +27,26 @@ footer p{
 	padding: 5%;
 	text-align: center;
 }
+
 a.permalink !important{
 	color: #fff;
 }
 
+a{
+	color: #fff;
+}
+a:hover{
+	color: #fff;
+	text-decoration: none;
+}
+h5{
+	font-weight: 100;
+	font-variant-caps: all-petite-caps;
+}
 
+h2{
+	font-variant-caps: all-petite-caps;
+}
 
 
 /*Navigation*/
@@ -95,6 +110,17 @@ ul{
 	margin-top: 100px;
 }
 
+/*Projects*/
+
+p.single-content{
+	margin-top: 50px;
+}
+
+@media only screen and (min-width: 992px){
+	p.single-content{
+		margin-top: 104px;
+	}
+}
 
 
 

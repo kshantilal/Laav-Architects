@@ -320,6 +320,7 @@
 	add_theme_support( 'post_thumbnails' );
 
 	add_image_size( 'Front-page-feature', 850, 560, true);
+	add_image_size( 'Single-Image', 540, 440, true);
 
 
 	// =============================================
