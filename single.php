@@ -10,8 +10,10 @@
 						<h2><?php the_title(); ?></h2>
 						<?php the_post_thumbnail('Single-Image'); ?>
 						
-						<?php echo $image = wp_get_attachment_image(get_post_meta($Post->ID, 'ImageOne', true), 'medium');?>
-
+						
+						<?php $customImage = get_post_meta($post->ID, 'custom_image_data', true); 
+							var_dump($customImage);
+						?>
 
 					</div>
 					<div class="col-md-6">

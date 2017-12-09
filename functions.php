@@ -206,10 +206,10 @@
 			'ImageOne' => array(
 				'title' => 'Image One',
 				'desc' => 'Upload an image',
-				'id' => $prefix . 'single_image1',
+				'id' => $prefix . 'test_image',
 				'type' => 'file',
 				// 'allow' => array( 'url', 'attachment' ),// limit to just attachments with array( 'attachment' )
-				'preview_size' => 'thumbnail', // Image size to use when previewing in the admin.
+				'preview_size' => array( 100, 100 ), // Image size to use when previewing in the admin.
  			),
  			// 'ImageTwo' => array(
 				// 'title' => 'Image Two',
@@ -522,8 +522,6 @@
 	<?php 
 	}
 	add_action('wp_head', 'laav_customize_css_navigation');
-
-
 
 
 
