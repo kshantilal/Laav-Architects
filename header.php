@@ -21,7 +21,7 @@
 		</div>
 		<div class="row">
 			<div class="container">
-				<div class="col-xs-12">
+				<div class="col-lg-6 col-lg-offset-3">
 					<nav class="navbar">
 						<div class="container-fluid">
 							<div class="navbar-header">

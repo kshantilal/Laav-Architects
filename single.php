@@ -11,12 +11,13 @@
 						<h3>#<?php echo get_post_meta($post->ID, 'ProjectNumber', true); ?></h3>
 						<h2><?php the_title(); ?></h2>
 						<?php the_post_thumbnail('Single-Image'); ?>
-						
-						<?php $custom = get_post_meta($post->ID, 'custom_image_data', true); ?>
-						<?php $customImage = $custom['src'];?>
-						<?php $ImageCropped = wp_get_attachment_image( $customImage, 'medium' );?>
 
-							<img src="<?php echo $customImage; ?>" alt="test">
+
+						<?php $custom = get_post_meta($post->ID, 'custom_image_data', true); ?>
+
+						<?php $customImage = $custom['src'];?>
+
+							<div><img src="<?php echo $customImage; ?>" style="width: 100%; height: 100%;"></div>
 							
 
 					</div>

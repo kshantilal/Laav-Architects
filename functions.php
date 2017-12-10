@@ -188,6 +188,21 @@
 	} 
 	add_action( 'init', 'servicesSection' );
 
+	function add_featured_image_display_settings( $content, $post_id ) {
+	$field_id    = 'show_featured_image';
+	$field_value = esc_attr( get_post_meta( $post_id, $field_id, true ) );
+	$field_text  = esc_html__( 'Show image.', 'generatewp' );
+	$field_state = checked( $field_value, 1, false);
+
+	$field_label = sprintf(
+	    '<p><label for="%1$s"><input type="checkbox" name="%1$s" id="%1$s" value="%2$s" %3$s> %4$s</label></p>',
+	    $field_id, $field_value, $field_state, $field_text
+	);
+
+	return $content .= $field_label;
+	}
+	add_filter( 'admin_post_thumbnail_html', 'add_featured_image_display_settings', 10, 2 );
+
 
 	// =============================================
 	// Custom Field for Title
@@ -203,46 +218,15 @@
 				'title' => 'Project number',
 				'type' => 'number'
 			),
-			'ImageOne' => array(
-				'title' => 'Image One',
-				'desc' => 'Upload an image',
-				'id' => $prefix . 'test_image',
-				'type' => 'file',
-				// 'allow' => array( 'url', 'attachment' ),// limit to just attachments with array( 'attachment' )
-				'preview_size' => array( 100, 100 ), // Image size to use when previewing in the admin.
- 			),
- 			// 'ImageTwo' => array(
-				// 'title' => 'Image Two',
-				// 'desc' => 'Upload an image',
-				// 'id' => $prefix . 'single_image2',
-				// 'type' => 'file',
-				// 'allow' => array( 'url', 'attachment' ),// limit to just attachments with array( 'attachment' )
-				// 'preview_size' => 'thumbnail', // Image size to use when previewing in the admin.
- 			// ),
- 			// 'ImageThree' => array(
-				// 'title' => 'Image Three',
-				// 'desc' => 'Upload an image',
-				// 'id' => $prefix . 'single_image3',
-				// 'type' => 'file',
-				// 'allow' => array( 'url', 'attachment' ),// limit to just attachments with array( 'attachment' )
-				// 'preview_size' => 'thumbnail', // Image size to use when previewing in the admin.
- 			// ),
- 			// 'ImageFour' => array(
-				// 'title' => 'Image Four',
-				// 'desc' => 'Upload an image',
-				// 'id' => $prefix . 'single_image4',
-				// 'type' => 'file',
-				// 'allow' => array( 'url', 'attachment' ),// limit to just attachments with array( 'attachment' )
-				// 'preview_size' => 'thumbnail', // Image size to use when previewing in the admin.
- 			// ),
- 			// 'ImageFive' => array(
-				// 'title' => 'Image Five',
-				// 'desc' => 'Upload an image',
-				// 'id' => $prefix . 'single_image4',
-				// 'type' => 'file',
-				// 'allow' => array( 'url', 'attachment' ),// limit to just attachments with array( 'attachment' )
-				// 'preview_size' => 'thumbnail', // Image size to use when previewing in the admin.
- 			// ),
+			// 'ImageOne' => array(
+			// 	'title' => 'Image One',
+			// 	'desc' => 'Upload an image',
+			// 	'id' => $prefix . 'test_image',
+			// 	'type' => 'file',
+			// 	// 'allow' => array( 'url', 'attachment' ),// limit to just attachments with array( 'attachment' )
+			// 	'preview_size' => array( 100, 100 ), // Image size to use when previewing in the admin.
+ 		// 	),
+
 		)
 	)
 	);
@@ -310,6 +294,13 @@
 			}
 		}
 	}
+
+	function move_featured_image(){
+		remove_meta_box( 'postimagediv', 'projects', 'side' );
+		add_meta_box( 'custom_image', 'Featured Image', 'post_thumbnail_meta_box', 'projects', 'normal', 'high' );
+
+	}
+	add_action( 'submitpost_box', 'move_featured_image' );
 
 	
 
