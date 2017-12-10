@@ -49,6 +49,8 @@ function save_custom_image( $post_id ) {
 		return;
 	}
 	if ( isset( $_POST[ 'custom_image_data' ] ) ) {
+		// var_dump("here");
+		// die($_POST[ 'custom_image_data' ] );
 		$image_data = json_decode( stripslashes( $_POST[ 'custom_image_data' ] ) );
 		if ( is_object( $image_data[0] ) ) {
 			$image_data = array( 'id' => intval( $image_data[0]->id ), 'src' => esc_url_raw( $image_data[0]->url ) );
@@ -58,6 +60,8 @@ function save_custom_image( $post_id ) {
 		update_post_meta( $post_id, 'custom_image_data', $image_data );
 	}
 }
+
+
 add_action( 'save_post', __NAMESPACE__ . '\save_custom_image' );
 
 

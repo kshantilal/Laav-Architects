@@ -146,6 +146,7 @@
 	} 
 	add_action( 'init', 'projectsSection' );
 
+
 	// =============================================
 	// Services Section
 	// =============================================
@@ -187,21 +188,6 @@
 		register_post_type( 'services', $args );
 	} 
 	add_action( 'init', 'servicesSection' );
-
-	function add_featured_image_display_settings( $content, $post_id ) {
-	$field_id    = 'show_featured_image';
-	$field_value = esc_attr( get_post_meta( $post_id, $field_id, true ) );
-	$field_text  = esc_html__( 'Show image.', 'generatewp' );
-	$field_state = checked( $field_value, 1, false);
-
-	$field_label = sprintf(
-	    '<p><label for="%1$s"><input type="checkbox" name="%1$s" id="%1$s" value="%2$s" %3$s> %4$s</label></p>',
-	    $field_id, $field_value, $field_state, $field_text
-	);
-
-	return $content .= $field_label;
-	}
-	add_filter( 'admin_post_thumbnail_html', 'add_featured_image_display_settings', 10, 2 );
 
 
 	// =============================================
@@ -294,6 +280,11 @@
 			}
 		}
 	}
+
+	
+	// =============================================
+	// Move featured image to left column
+	// =============================================
 
 	function move_featured_image(){
 		remove_meta_box( 'postimagediv', 'projects', 'side' );
