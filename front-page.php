@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-	<div class="row">
-		<div class="container">
+	<div class="container">
+		<div class="row">
 				<?php  
 				$arg = array(
 					'post_type' => 'slider', 
@@ -48,7 +48,25 @@
 					<?php endif; ?>
 				</div>
 			</div>
-		</div>		
+		</div>
+		<div class="row">
+		<?php 
+			$args = array(
+				'post_type' => 'projects',
+				'posts_per_page' => 3,
+				'paged' => get_query_var('paged')
+			);
+		 ?>
+		 	<?php $latestPosts = new WP_Query($args); ?>
+			<?php if($latestPosts->have_posts()): ?>
+				<?php while($latestPosts->has_posts()): $latestPosts->the_post(); ?>
+					<div class="col-md-4">
+						<div class="projectImage"><?php the_post_thumbnail(); ?></div>
+		 				<h3>#<?php echo get_post_meta($post->ID, 'ProjectNumber', true); ?></h3>
+					</div>
+				<?php endwhile; ?>
+			<?php endif; ?>
+		</div>
 	</div>
 <?php get_footer(); ?>
 

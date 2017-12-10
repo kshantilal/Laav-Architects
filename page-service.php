@@ -14,6 +14,7 @@
  				);
  			 ?>
  			 <?php $services = new WP_Query($arg); ?>
+ 			 <h1 class="serviceTitle"><?php the_title(); ?></h1>
  			 <?php if($services->have_posts()): ?>
  			 	<?php while($services->have_posts()) : $services->the_post();?>
  			 		<div class="col-md-4 services">

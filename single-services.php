@@ -54,7 +54,6 @@
 				  <div class="form-group">
 				    <label for="mobile">Enquiry</label>
 				     <textarea class="form-control" rows="5" placeholder="Your Enquiry"></textarea>
-				     <span class="input-errors"></span>
 				  </div>
 
 				 

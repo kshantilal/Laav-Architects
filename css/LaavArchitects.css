@@ -75,6 +75,9 @@ ul{
 	background-color: transparent;
 	border: 1px solid #fff;
 }
+.navbar-nav>li>a{
+	padding: 10px;
+}
 
 .navbar-nav>li {
 	width: 150px;

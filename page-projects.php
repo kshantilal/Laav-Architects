@@ -14,7 +14,7 @@
  				);
  			 ?>
  			 <?php $projectPosts = new WP_Query($arg); ?>
-
+ 			 <h1 class="serviceTitle"><?php the_title(); ?></h1>
  			 <?php if($projectPosts->have_posts()): ?>
  			 	<?php while($projectPosts->have_posts()): $projectPosts->the_post(); ?>
  			 		<div class="col-md-4">
@@ -26,7 +26,7 @@
 
 
  			 		</div>
- 			 	<?php endwhile; ?>
+ 			 	<?php endwhile; wp_reset_query(); ?>
  			 <?php endif; ?>
  		</div>
  	</div>
