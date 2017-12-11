@@ -29,20 +29,20 @@ a:hover{
 h1, h2, h3, h4, h5{
 	font-weight: 100;
 	font-variant-caps: all-petite-caps;
-    letter-spacing: 4px;
+	letter-spacing: 4px;
 }
 
 .back{
 	font-variant-caps: all-petite-caps;
-    letter-spacing: 4px;
-    font-size: 15px;
+	letter-spacing: 4px;
+	font-size: 15px;
 }
 .btn:hover{
 	color: inherit;
 }
 .btn-default{
 	font-variant-caps: all-petite-caps;
-    letter-spacing: 3px;
+	letter-spacing: 3px;
 }
 
 .fa-angle-left{
@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5{
 
 .fa-slider{
 	position: absolute;
-    top: 35%;
+	top: 35%;
 }
 
 /*====================*/
@@ -160,7 +160,7 @@ ul{
 .footerSpacing{
 	margin-top: 100px;
 	font-variant-caps: all-petite-caps;
-    letter-spacing: 3px;
+	letter-spacing: 3px;
 }
 
 .footerSpacing p{
@@ -193,9 +193,9 @@ p.single-content{
 
 label{
 	font-weight: 100;
-    font-variant: all-petite-caps;
-    font-size: 15px;
-    letter-spacing: 6px;
+	font-variant: all-petite-caps;
+	font-size: 15px;
+	letter-spacing: 6px;
 }
 
 
