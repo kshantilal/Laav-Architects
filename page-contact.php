@@ -6,6 +6,7 @@
 
  <?php get_header(); ?>
  	<div class="container">
+ 	<div class="back btn"><i class="fa fa-angle-left fa-lg" aria-hidden="true"></i>Back</div>
  		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 

@@ -22,7 +22,7 @@
 
 
 	// =============================================
-	//Header
+	// Header
 	// =============================================
 	function customLogoSetup(){
 		$customLogoSettings = array(
@@ -38,7 +38,7 @@
 	add_action('after_setup_theme', 'customLogoSetup');
 	
 	// =============================================
-	//Navigation bar
+	// Navigation bar
 	// =============================================
 	function customMenuSetup(){
 		add_theme_support('menus');
@@ -233,7 +233,6 @@
 			// 	// 'allow' => array( 'url', 'attachment' ),// limit to just attachments with array( 'attachment' )
 			// 	'preview_size' => array( 100, 100 ), // Image size to use when previewing in the admin.
  		// 	),
-
 		)
 	)
 	);
@@ -385,10 +384,14 @@
 
 
 	// =============================================
-	//Customize 
+	// Customize 
 	// =============================================
+
+
 	function laavCustomise($wp_customize){
-		//Settings
+		// ===================
+		// Settings
+		// ===================
 			//Footer Text
 			$wp_customize->add_setting('laav_footer_text', array(
 				'default' => 'This is your footer text',
@@ -414,10 +417,16 @@
 				'default' => '#2a364a',
 				'transport' => 'refresh'
 			));
+			//Services Colour
+			$wp_customize->add_setting('laav_services_colour', array(
+				'default' => '#fff',
+				'transport' => 'refresh'
+			));
 			
 
-
-		//Section
+		// ===================
+		// Section
+		// ===================
 			// Footer Section
 			$wp_customize->add_section('laav_footer_section', array(
 				'title' => __('Footer', 'New Custom Theme'),
@@ -433,9 +442,16 @@
 				'title' => __('Background', 'New Custom Theme'),
 				'priority' => 30
 			));
+			//Services Section
+			$wp_customize->add_section('laav_services_section', array(
+				'title' => __('Services', 'New Custom Theme'),
+				'priority' => 30
+			));
+			
 
-
-		//Control
+		// ===================
+		// Control
+		// ===================
 			//Footer Text
 			$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'laav_footer_text_control', array(
 				'label' => 'Footer Text',
@@ -470,7 +486,13 @@
 				'settings' => 'laav_background_colour'
 
 			)));
-
+			//Services Control Colour
+			$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'laav_services_colour_control', array(
+				'label' => __('Services Text Colour', 'New Custom Theme'),
+				'section' => 'laav_services_section',
+				'settings' => 'laav_services_colour'
+ 			)));
+			
 	}
 
 	add_action('customize_register', 'laavCustomise');
@@ -479,10 +501,34 @@
 	// =============================================
 	//Custom CSS
 	// =============================================
-	function laav_customize_css_footer(){
+	function laav_customize_css(){
 	?>
 		<style type="text/css">
+			body{
+				background-color: <?php echo get_theme_mod('laav_background_colour'); ?>
+			}
+			#navbar a {
+				color: <?php echo get_theme_mod('laav_nav_colour'); ?>
+			}
+			.nav>li>a:hover {
+				border: 1px solid <?php echo get_theme_mod('laav_nav_colour'); ?>
+			}
 			
+			.titleNumberInline{
+				color: <?php get_theme_mod('laav_services_colour'); ?> !important
+			}
+
+
+
+
+
+
+
+
+
+
+
+
 			footer{
 				background-color: <?php echo get_theme_mod('laav_footer_colour'); ?>
 				
@@ -495,28 +541,10 @@
 
 	<?php 
 	}
-	add_action('wp_footer', 'laav_customize_css_footer');
-
-	function laav_customize_css_navigation(){
-	?>
-		<style type="text/css">
-				#navbar a {
-					color: <?php echo get_theme_mod('laav_nav_colour'); ?>
-				}
-				.nav>li>a:hover {
-					border: 1px solid <?php echo get_theme_mod('laav_nav_colour'); ?>
-				}
-				
-				body{
-					background-color: <?php echo get_theme_mod('laav_background_colour'); ?>
-				}
-		</style>
+	add_action('wp_head', 'laav_customize_css');
 
 
-	<?php 
-	}
-	add_action('wp_head', 'laav_customize_css_navigation');
-
+	
 
 
 

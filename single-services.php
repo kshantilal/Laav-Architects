@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 	<?php get_header(); ?>
 	<div class="container">
+	<div class="back btn"><i class="fa fa-angle-left fa-lg" aria-hidden="true"></i>Back</div>
 		<div class="row">
 			<?php if(have_posts()): ?>
 				<?php while(have_posts()): the_post(); ?>
@@ -32,22 +33,22 @@
 				<form class="form" method="POST">
 					<div class="form-group col-md-5 no-padding">
 						<label for="firstName">First Name</label>
-						<input type="text" class="form-control" id="firstName" placeholder="First Name">
+						<input type="text" class="form-control" id="firstName" placeholder="First Name" required>
 						<span class="input-errors"></span>
 					</div>
 					<div class="form-group col-md-5 col-md-offset-2 no-padding">
 						<label for="lastName">Last Name</label>
-						<input type="text" class="form-control" id="lastName" placeholder="Last Name">
+						<input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
 						<span class="input-errors"></span>
 					</div>
 					<div class="form-group">
 						<label for="exampleInputPassword1">Address</label>
-						<input type="address" class="form-control" id="exampleInputPassword1" placeholder="Address">
+						<input type="address" class="form-control" id="address" placeholder="Address" required>
 						<span class="input-errors"></span>
 					</div>
 					<div class="form-group">
 						<label for="mobile">Mobile Number</label>
-						<input type="number" class="form-control" id="exampleInputPassword1" placeholder="Mobile Number">
+						<input type="number" class="form-control" id="mobile" placeholder="Mobile Number" required>
 						<span class="input-errors"></span>
 					</div>
 					<div class="form-group">

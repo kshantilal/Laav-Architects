@@ -13,30 +13,16 @@ body{
 	margin: 0px;
 }
 
-footer{
-	width: 100%;
-	height: 50px;
-	text-align: center;
+p{
+	margin: 0;
 }
-
-footer p{
-	padding: 1em;
-}
-
 .customLogo{
 	padding: 5%;
 	text-align: center;
 }
 
-a.permalink !important{
-	color: #fff;
-}
-
-a{
-	color: #fff;
-}
 a:hover{
-	color: #fff;
+	/*color: #fff;*/
 	text-decoration: none;
 }
 
@@ -45,12 +31,32 @@ h1, h2, h3, h4, h5{
 	font-variant-caps: all-petite-caps;
     letter-spacing: 4px;
 }
-/*img{
-	width: 100%;
-}
-*/
 
-/*Navigation*/
+.back{
+	font-variant-caps: all-petite-caps;
+    letter-spacing: 4px;
+    font-size: 15px;
+}
+.btn:hover{
+	color: inherit;
+}
+.btn-default{
+	font-variant-caps: all-petite-caps;
+    letter-spacing: 3px;
+}
+
+.fa-angle-left{
+	padding-right: 5px;
+}
+
+.fa-slider{
+	position: absolute;
+    top: 35%;
+}
+
+/*====================*/
+/*NAVIGATION*/
+/*====================*/
 ul{
 	list-style: none;
 }
@@ -93,7 +99,9 @@ ul{
 	background-image: none;
 }
 
-/*Services*/
+/*====================*/
+/*SERVICES*/
+/*====================*/
 
 .services{
 	text-align: center;
@@ -113,13 +121,23 @@ ul{
 	padding: 0;
 }
 
-/*Projects*/
+/*====================*/
+/*FORM*/
+/*====================*/
+.form-control{
+	color: #fff;
+}
+
+/*====================*/
+/*PROJECTS*/
+/*====================*/
 
 .projectImage img{
 	width: 100%;
 	height: 100%;
 	border-radius: 2px;
 }
+
 .titleNumberInline{
 	display: inline-block;
 	padding-right: 5px;
@@ -129,23 +147,39 @@ ul{
 	border: none !important;
 	border-radius: 2px;
 }
+.projectNumber{
+	font-size: 40px;
+	letter-spacing: 2px;
+}
 
-/*Footer*/
+/*====================*/
+/*FOOTER*/
+/*====================*/
+
 
 .footerSpacing{
 	margin-top: 100px;
+	font-variant-caps: all-petite-caps;
+    letter-spacing: 3px;
 }
 
-/*Projects Single*/
+.footerSpacing p{
+	padding: 15px;
+}
+
+footer{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+}
+
+
+/*====================*/
+/*PROJECTS SINGLE*/
+/*====================*/
 
 p.single-content{
 	margin-top: 50px;
-}
-
-@media only screen and (min-width: 992px){
-	p.single-content{
-		margin-top: 104px;
-	}
 }
 
 .form{
@@ -162,6 +196,19 @@ label{
     font-variant: all-petite-caps;
     font-size: 15px;
     letter-spacing: 6px;
+}
+
+
+/*====================*/
+/*MEDIA QUERIES*/
+/*====================*/
+@media only screen and (min-width: 992px){
+	p.single-content{
+		margin-top: 104px;
+	}
+	.fa-slider{
+		top: 43%;
+	}
 }
 
 
