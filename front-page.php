@@ -58,12 +58,13 @@
 		 ?>
 		 	<?php $latestPosts = new WP_Query($args); ?>
 			<?php if($latestPosts->have_posts()): ?>
-
-				<?php while($latestPosts->have_posts()): $latestPosts->the_post(); ?>		
+				<h1 style="margin-top: 100px;" class="serviceTitle"><?php echo get_theme_mod('laav_latestpost_text'); ?></h1>	
+				<?php while($latestPosts->have_posts()): $latestPosts->the_post(); ?>	
 					<div class="col-md-4">
-						<div class="projectImage"><?php the_post_thumbnail(); ?></div>
+						<a class="permalink" href="<?php echo(get_permalink()); ?>">
+							<div class="projectImage"><?php the_post_thumbnail(); ?></div>
+						</a>
 		 				<h3>#<?php echo get_post_meta($post->ID, 'ProjectNumber', true); ?></h3>
-		 			
 					</div>
 					<?php endwhile; ?>
 			<?php endif; ?>

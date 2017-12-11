@@ -352,6 +352,11 @@
 				'default' => 'This is your footer text',
 				'transport' => 'refresh'
 			));
+			//Latest Posts Text
+			$wp_customize->add_setting('laav_latestpost_text', array(
+				'default' => 'This is your latest post title',
+				'transport' => 'refresh'
+			));
 			//Footer Setting Background Colour
 			$wp_customize->add_setting('laav_footer_colour', array(
 				'default' => '#53607a',
@@ -385,6 +390,15 @@
 				'default' => '#fff',
 				'transport' => 'refresh'
 			));
+			$wp_customize->add_setting('laav_services_form_border_colour', array(
+				'default' => '#ccc',
+				'transport' => 'refresh'
+			));
+			$wp_customize->add_setting('laav_about_text_colour', array(
+				'default' => '#fff',
+				'transport' => 'refresh'
+			));
+
 
 		// ===================
 		// Section
@@ -407,6 +421,16 @@
 			//Services Section
 			$wp_customize->add_section('laav_services_section', array(
 				'title' => __('Services', 'New Custom Theme'),
+				'priority' => 30
+			));
+			//Front page Section
+			$wp_customize->add_section('laav_frontpage_section', array(
+				'title' => __('Front page', 'New Custom Theme'),
+				'priority' => 30
+			));
+			//About page Section
+			$wp_customize->add_section('laav_about_section', array(
+				'title' => __('About us', 'New Custom Theme'),
 				'priority' => 30
 			));
 
@@ -455,10 +479,31 @@
 				'settings' => 'laav_services_title_colour'
  			)));
  			$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'laav_services_colour_form_control', array(
-				'label' => __('Form Colour', 'New Custom Theme'),
+				'label' => __('Form Text Colour', 'New Custom Theme'),
 				'section' => 'laav_services_section',
 				'settings' => 'laav_services_form_colour'
  			)));
+ 			$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'laav_services_colour_form_border_control', array(
+				'label' => __('Form Border Colour', 'New Custom Theme'),
+				'section' => 'laav_services_section',
+				'settings' => 'laav_services_form_border_colour'
+ 			)));
+ 			//Latest post Text
+			$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'laav_latestpost_text_control', array(
+				'label' => 'Latest Post Text',
+				'section' => 'laav_frontpage_section',
+				'settings' => 'laav_latestpost_text'
+			)));
+			//About Us Text
+			$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'laav_aboutus_text_control', array(
+				'label' => 'About us Text',
+				'section' => 'laav_about_section',
+				'settings' => 'laav_about_text_colour'
+			)));
+
+
+
+			
 
 
 
@@ -489,6 +534,16 @@
 
 			.form{
 				color: <?php echo get_theme_mod('laav_services_form_colour'); ?>;
+			}
+			.form-control{
+				border: 2px solid <?php echo get_theme_mod('laav_services_form_border_colour'); ?>;
+			}
+			.btn-default{
+				border-color: <?php echo get_theme_mod('laav_services_form_border_colour'); ?>; 
+			}
+
+			.aboutusText{
+				color: <?php echo get_theme_mod('laav_about_text_colour'); ?>;
 			}
 
 			footer{

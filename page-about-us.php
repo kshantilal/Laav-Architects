@@ -15,7 +15,7 @@
 					<div class="col-md-5 col-md-offset-1">			
 						<div style="text-align: center;"><?php the_post_thumbnail('Single-Image'); ?></div>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4 aboutusText">
 						<?php the_content(); ?>
 
 					</div>
