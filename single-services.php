@@ -14,7 +14,7 @@
 		
 					<div class="singleImage"><img src="<?php echo $customImage; ?>" style="width: 100%; height: 100%;"></div>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 servicesText">
 						<?php the_content(); ?>
 
 					</div>

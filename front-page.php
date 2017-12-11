@@ -54,17 +54,18 @@
 			$args = array(
 				'post_type' => 'projects',
 				'posts_per_page' => 3,
-				'paged' => get_query_var('paged')
 			);
 		 ?>
 		 	<?php $latestPosts = new WP_Query($args); ?>
 			<?php if($latestPosts->have_posts()): ?>
-				<?php while($latestPosts->has_posts()): $latestPosts->the_post(); ?>
+
+				<?php while($latestPosts->have_posts()): $latestPosts->the_post(); ?>		
 					<div class="col-md-4">
 						<div class="projectImage"><?php the_post_thumbnail(); ?></div>
 		 				<h3>#<?php echo get_post_meta($post->ID, 'ProjectNumber', true); ?></h3>
+		 			
 					</div>
-				<?php endwhile; ?>
+					<?php endwhile; ?>
 			<?php endif; ?>
 		</div>
 	</div>

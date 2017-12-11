@@ -1,26 +1,19 @@
-<?php 
+<?php
 	// =============================================
 	//Add css and scripts
 	// =============================================
 	function customThemeEnqueues(){
 		wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.7', 'all' );
 		wp_enqueue_style( 'customStyle', get_template_directory_uri() . '/css/LaavArchitects.css', array(), '1.0.0', 'all' );
-
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'bootstrapjs', get_template_directory_uri().'/js/bootstrap.min.js', array(), '3.3.7', true );
 		wp_enqueue_script( 'customScript', get_template_directory_uri() . '/js/LaavArchitects.js', array(), '1.0.0', true ); //true is asking is it in the footer. true or false.
 	}
 	add_action('wp_enqueue_scripts', 'customThemeEnqueues');
-
-
-
 	function addGoogleFonts(){
 		wp_enqueue_style( 'wp-open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300', false );
 	}
 	add_action('wp_enqueue_scripts', 'addGoogleFonts');
-
-
-
 	// =============================================
 	// Header
 	// =============================================
@@ -36,7 +29,7 @@
 	}
 	add_theme_support('custom-logo');
 	add_action('after_setup_theme', 'customLogoSetup');
-	
+
 	// =============================================
 	// Navigation bar
 	// =============================================
@@ -45,7 +38,7 @@
 		register_nav_menu('primary', 'This is the main navigation located at the top of the page');
 	}
 	add_action('init', 'customMenuSetup');
-	
+
 	// Register Custom Navigation Walker
 	require_once get_template_directory() . '/wp-bootstrap-navwalker.php';
 	// Bootstrap navigation
@@ -59,29 +52,20 @@
 				'walker'            => new wp_bootstrap_navwalker())
 		);
 	}
-
 	// =============================================
 	// Custom Crop Images
 	// =============================================
 	function cropImages(){
 		add_image_size( 'Front-page-feature', 850, 560, true);
 		add_image_size( 'Single-Image', 540, 440, true);
-
 		add_theme_support( 'post_thumbnails' );
-
 	}
 	add_action( 'after_setup_theme', 'cropImages' );
-
-
 	// function move_featured_image(){
 	// 	remove_meta_box( 'image_metabox', 'projects', 'advanced' );
 	// 	add_meta_box( 'custom_image', 'Single Image', 'image_metabox', 'projects', 'advanced', 'high' );
-
 	// }
 	// add_action( 'submitpost_box', 'move_featured_image' );
-
-
-
 	// =============================================
 	// Front Page Slider Section
 	// =============================================
@@ -102,7 +86,6 @@
 			'not_found'          => __( 'No Slide found.'),
 			'not_found_in_trash' => __( 'No Slide found in Trash.'),
 		);
-
 		$args = array(
 			'labels'             => $labels,
 			'menu_icon'	         => 'dashicons-image-flip-horizontal',
@@ -119,12 +102,10 @@
 			'menu_position'      => null,
 			'supports'           => array('title','thumbnail')
 		);
-
 		register_post_type( 'slider', $args );
 		add_theme_support( 'post-thumbnails' );
-	} 
+	}
 	add_action( 'init', 'frontPageSlider' );
-
 	// =============================================
 	// Projects Section
 	// =============================================
@@ -145,7 +126,6 @@
 			'not_found'          => __( 'No Project found.'),
 			'not_found_in_trash' => __( 'No Project found in Trash.'),
 		);
-
 		$args = array(
 			'labels'             => $labels,
 			'menu_icon'	         => 'dashicons-admin-home',
@@ -162,12 +142,9 @@
 			'menu_position'      => null,
 			'supports'           => array('title','editor', 'thumbnail', 'page-attributes')
 		);
-
 		register_post_type( 'projects', $args );
-	} 
+	}
 	add_action( 'init', 'projectsSection' );
-
-
 	// =============================================
 	// Services Section
 	// =============================================
@@ -188,7 +165,6 @@
 			'not_found'          => __( 'No Service found.'),
 			'not_found_in_trash' => __( 'No Service found in Trash.'),
 		);
-
 		$args = array(
 			'labels'             => $labels,
 			'menu_icon'	         => 'dashicons-groups',
@@ -205,12 +181,9 @@
 			'menu_position'      => null,
 			'supports'           => array('title','editor', 'thumbnail', 'page-attributes')
 		);
-
 		register_post_type( 'services', $args );
-	} 
+	}
 	add_action( 'init', 'servicesSection' );
-
-
 	// =============================================
 	// Custom Field for Title
 	// =============================================
@@ -236,7 +209,6 @@
 		)
 	)
 	);
-	
 
 	function add_post_format_metabox() {
 		global $metaboxes;
@@ -246,15 +218,12 @@
 			}
 		}
 	}
-
 	add_action( 'admin_init', 'add_post_format_metabox' );
-
 	function show_metaboxes( $post, $args ) {
 		global $metaboxes;
 		$custom = get_post_custom( $post->ID );
 		$fields = $tabs = $metaboxes[$args['id']]['fields'];
 		$output = '<input type="hidden" name="post_format_meta_box_nonce" value="' . wp_create_nonce( basename( __FILE__ ) ) . '" />';
-
 		if ( sizeof( $fields ) ) {
 			foreach ( $fields as $id => $field ) {
 				switch ( $field['type'] ) {
@@ -301,31 +270,22 @@
 		}
 	}
 
-	
 	// =============================================
 	// Move featured image to left column
 	// =============================================
-
 	// function move_featured_image(){
 	// 	remove_meta_box( 'postimagediv', 'projects', 'side' );
 	// 	add_meta_box( 'custom_image', 'Featured Image', 'post_thumbnail_meta_box', 'projects', 'normal', 'high' );
-
 	// }
 	// add_action( 'submitpost_box', 'move_featured_image' );
-
-
-
-
 	// =============================================
-	// Delete Comments Section 
+	// Delete Comments Section
 	// =============================================
 	function removeCommentsAdmin() {
 		global $wp_admin_bar;
 		$wp_admin_bar->remove_menu('comments');
 	}
 	add_action( 'wp_before_admin_bar_render', 'removeCommentsAdmin' );
-
-
 	// Disable support for comments and trackbacks in post types
 	function df_disable_comments_post_types_support() {
 		$post_types = get_post_types();
@@ -337,27 +297,27 @@
 		}
 	}
 	add_action('admin_init', 'df_disable_comments_post_types_support');
-	
+
 	// Close comments on the front-end
 	function df_disable_comments_status() {
 		return false;
 	}
 	add_filter('comments_open', 'df_disable_comments_status', 20, 2);
 	add_filter('pings_open', 'df_disable_comments_status', 20, 2);
-	
+
 	// Hide existing comments
 	function df_disable_comments_hide_existing_comments($comments) {
 		$comments = array();
 		return $comments;
 	}
 	add_filter('comments_array', 'df_disable_comments_hide_existing_comments', 10, 2);
-	
+
 	// Remove comments page in menu
 	function df_disable_comments_admin_menu() {
 		remove_menu_page('edit-comments.php');
 	}
 	add_action('admin_menu', 'df_disable_comments_admin_menu');
-	
+
 	// Redirect any user trying to access comments page
 	function df_disable_comments_admin_menu_redirect() {
 		global $pagenow;
@@ -366,13 +326,13 @@
 		}
 	}
 	add_action('admin_init', 'df_disable_comments_admin_menu_redirect');
-	
+
 	// Remove comments metabox from dashboard
 	function df_disable_comments_dashboard() {
 		remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal');
 	}
 	add_action('admin_init', 'df_disable_comments_dashboard');
-	
+
 	// Remove comments links from admin bar
 	function df_disable_comments_admin_bar() {
 		if (is_admin_bar_showing()) {
@@ -380,14 +340,9 @@
 		}
 	}
 	add_action('init', 'df_disable_comments_admin_bar');
-
-
-
 	// =============================================
-	// Customize 
+	// Customize
 	// =============================================
-
-
 	function laavCustomise($wp_customize){
 		// ===================
 		// Settings
@@ -418,11 +373,18 @@
 				'transport' => 'refresh'
 			));
 			//Services Colour
-			$wp_customize->add_setting('laav_services_colour', array(
+			$wp_customize->add_setting('laav_services_text_colour', array(
 				'default' => '#fff',
 				'transport' => 'refresh'
 			));
-			
+			$wp_customize->add_setting('laav_services_title_colour', array(
+				'default' => '#fff',
+				'transport' => 'refresh'
+			));
+			$wp_customize->add_setting('laav_services_form_colour', array(
+				'default' => '#fff',
+				'transport' => 'refresh'
+			));
 
 		// ===================
 		// Section
@@ -447,7 +409,6 @@
 				'title' => __('Services', 'New Custom Theme'),
 				'priority' => 30
 			));
-			
 
 		// ===================
 		// Control
@@ -463,41 +424,46 @@
 				'label' => __('Footer Background Colour', 'New Custom Theme'),
 				'section' => 'laav_footer_section',
 				'settings' => 'laav_footer_colour'
-
 			)));
 			//Footer Control Text Colour
 			$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'laav_footer_text_colour_control', array(
 				'label' => __('Footer Text Colour', 'New Custom Theme'),
 				'section' => 'laav_footer_section',
 				'settings' => 'laav_footer_text_colour'
-
 			)));
 			//Navigation Control Text Colour
 			$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'laav_navigation_colour_control', array(
 				'label' => __('Navigation Text Colour & Border', 'New Custom Theme'),
 				'section' => 'laav_nav_section',
 				'settings' => 'laav_nav_colour'
-
 			)));
 			//Background Control Colour
 			$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'laav_background_colour_control', array(
 				'label' => __('Background Colour', 'New Custom Theme'),
 				'section' => 'laav_background_section',
 				'settings' => 'laav_background_colour'
-
 			)));
 			//Services Control Colour
 			$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'laav_services_colour_control', array(
 				'label' => __('Services Text Colour', 'New Custom Theme'),
 				'section' => 'laav_services_section',
-				'settings' => 'laav_services_colour'
+				'settings' => 'laav_services_text_colour'
  			)));
-			
+			$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'laav_services_colour_title_control', array(
+				'label' => __('Services Title Colour', 'New Custom Theme'),
+				'section' => 'laav_services_section',
+				'settings' => 'laav_services_title_colour'
+ 			)));
+ 			$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'laav_services_colour_form_control', array(
+				'label' => __('Form Colour', 'New Custom Theme'),
+				'section' => 'laav_services_section',
+				'settings' => 'laav_services_form_colour'
+ 			)));
+
+
+
 	}
-
 	add_action('customize_register', 'laavCustomise');
-
-
 	// =============================================
 	//Custom CSS
 	// =============================================
@@ -513,25 +479,21 @@
 			.nav>li>a:hover {
 				border: 1px solid <?php echo get_theme_mod('laav_nav_colour'); ?>
 			}
-			
-			.titleNumberInline{
-				color: <?php get_theme_mod('laav_services_colour'); ?> !important
+
+			.servicesText p{
+				color: <?php echo get_theme_mod('laav_services_text_colour'); ?>; !important;
+			}
+			.serviceTitle{
+				color: <?php echo get_theme_mod('laav_services_title_colour'); ?>;
 			}
 
-
-
-
-
-
-
-
-
-
-
+			.form{
+				color: <?php echo get_theme_mod('laav_services_form_colour'); ?>;
+			}
 
 			footer{
 				background-color: <?php echo get_theme_mod('laav_footer_colour'); ?>
-				
+
 			}
 			footer p{
 				color: <?php echo get_theme_mod('laav_footer_text_colour'); ?>
@@ -539,21 +501,6 @@
 		</style>
 
 
-	<?php 
+	<?php
 	}
 	add_action('wp_head', 'laav_customize_css');
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-

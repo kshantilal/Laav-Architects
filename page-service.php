@@ -23,7 +23,7 @@
  			 			<a class="permalink" href="<?php echo(get_permalink()); ?>">	 			 			
 	 			 			<?php the_post_thumbnail('thumbnail'); ?>
  			 			</a>
- 			 			<div id="servicesText">
+ 			 			<div class="servicesText">
  			 				<p><?php the_content(); ?></p>
  			 			</div>
 

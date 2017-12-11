@@ -5,9 +5,9 @@
 
 
 body{
-	color: #fff;
 	font-family: 'Open Sans';
 	font-weight: 100;
+	color: #fff;
 }
 .row{
 	margin: 0px;
@@ -97,6 +97,14 @@ ul{
 .carousel-control.left, .carousel-control.right{
 	background-color: transparent;
 	background-image: none;
+}
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
 }
 
 /*====================*/

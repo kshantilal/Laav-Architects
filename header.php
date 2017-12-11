@@ -21,10 +21,7 @@
 			<div class="col-xs-12"><?php the_custom_logo('thumbnail'); ?></div>
 		</div>
 		<div class="row">
-			<div class="container">
-				<div class="col-xs-12">
 					<nav class="navbar">
-						<div class="container-fluid">
 							<div class="navbar-header">
 								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 									<span class="sr-only">Toggle navigation</span>
@@ -36,10 +33,7 @@
 							<div id="navbar" class="navbar-collapse collapse">
 								<?php bootstrap_nav(); ?>
 							</div><!--/.nav-collapse -->
-						</div><!--/.container-fluid -->
 					</nav>
-				</div>
-			</div>
 		</div>
 	</div>
 
