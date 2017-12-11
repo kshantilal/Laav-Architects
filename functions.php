@@ -60,6 +60,27 @@
 		);
 	}
 
+	// =============================================
+	// Custom Crop Images
+	// =============================================
+	function cropImages(){
+		add_image_size( 'Front-page-feature', 850, 560, true);
+		add_image_size( 'Single-Image', 540, 440, true);
+
+		add_theme_support( 'post_thumbnails' );
+
+	}
+	add_action( 'after_setup_theme', 'cropImages' );
+
+
+	// function move_featured_image(){
+	// 	remove_meta_box( 'image_metabox', 'projects', 'advanced' );
+	// 	add_meta_box( 'custom_image', 'Single Image', 'image_metabox', 'projects', 'advanced', 'high' );
+
+	// }
+	// add_action( 'submitpost_box', 'move_featured_image' );
+
+
 
 	// =============================================
 	// Front Page Slider Section
@@ -286,23 +307,14 @@
 	// Move featured image to left column
 	// =============================================
 
-	function move_featured_image(){
-		remove_meta_box( 'postimagediv', 'projects', 'side' );
-		add_meta_box( 'custom_image', 'Featured Image', 'post_thumbnail_meta_box', 'projects', 'normal', 'high' );
+	// function move_featured_image(){
+	// 	remove_meta_box( 'postimagediv', 'projects', 'side' );
+	// 	add_meta_box( 'custom_image', 'Featured Image', 'post_thumbnail_meta_box', 'projects', 'normal', 'high' );
 
-	}
-	add_action( 'submitpost_box', 'move_featured_image' );
-
-	
+	// }
+	// add_action( 'submitpost_box', 'move_featured_image' );
 
 
-	// =============================================
-	// Custom Crop Images
-	// =============================================
-	add_theme_support( 'post_thumbnails' );
-
-	add_image_size( 'Front-page-feature', 850, 560, true);
-	add_image_size( 'Single-Image', 540, 440, true);
 
 
 	// =============================================

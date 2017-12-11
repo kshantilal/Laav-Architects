@@ -20,9 +20,9 @@
  			 		<div class="col-md-4">
  			 			<a class="permalink" href="<?php echo(get_permalink()); ?>">
 				 			<div class="projectImage"><?php the_post_thumbnail(); ?></div>
-				 			<h3>#<?php echo get_post_meta($post->ID, 'ProjectNumber', true); ?></h3>
-				 			<h5><?php the_title();?></h5>
  			 			</a>
+ 			 			<h3 class="titleNumberInline">#<?php echo get_post_meta($post->ID, 'ProjectNumber', true); ?></h3>
+				 		<h5 class="titleNumberInline"><?php the_title();?></h5>
 
 
  			 		</div>

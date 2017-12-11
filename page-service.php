@@ -19,7 +19,7 @@
  			 	<?php while($services->have_posts()) : $services->the_post();?>
  			 		<div class="col-md-4 services">
  			 			<a class="permalink" href="<?php echo(get_permalink()); ?>">
-	 			 			<h2 class="serviceTitle"><?php the_title();?></h2>
+	 			 			<h3 class="serviceTitle"><?php the_title();?></h3>
 	 			 			<?php the_post_thumbnail('thumbnail'); ?>
 	 			 			<p><?php the_content(); ?></p>
  			 			</a>
