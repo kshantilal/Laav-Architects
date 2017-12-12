@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-	<?php get_header(); ?>
 	<div class="container">
 	<div class="back btn"><i class="fa fa-angle-left fa-lg" aria-hidden="true"></i>Back</div>
 		<div class="row">

@@ -20,7 +20,7 @@
  			 	<?php while($projectPosts->have_posts()): $projectPosts->the_post(); ?>
  			 		<div class="col-md-4">
  			 			<a class="permalink" href="<?php echo(get_permalink()); ?>">
-				 			<div class="projectImage"><?php the_post_thumbnail(); ?></div>
+				 			<div class="projectImage"><?php the_post_thumbnail('large'); ?></div>
  			 			</a>
  			 			<h3 class="titleNumberInline">#<?php echo get_post_meta($post->ID, 'ProjectNumber', true); ?></h3>
 				 		<h5 class="titleNumberInline"><?php the_title();?></h5>
