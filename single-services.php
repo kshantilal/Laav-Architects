@@ -22,6 +22,15 @@
 				<?php endwhile; ?>
 			<?php endif; ?>
 		</div>
+		<?php 
+
+			$showThanks = false;
+			if (isset($_POST['contact_name'])) {
+				$showThanks = true;
+				
+			}
+ 
+		 ?>
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2 form">
 
@@ -29,10 +38,16 @@
 
 			</div>
 			<div class="col-md-6 col-md-offset-3">
+				<?php if($showThanks) { ?>
+
+				<h3 class="services">Thank you for your enquiry, We will get back to you as soon as possible</h3>
+				<h3 class="services"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Go back to the homepage</a></h3>
+
+				<?php } else { ?>
 				<form class="form" method="POST">
 					<div class="form-group col-md-5 no-padding">
 						<label for="firstName">First Name</label>
-						<input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+						<input type="text" class="form-control" name="contact_name" id="firstName" placeholder="First Name" required>
 						<span class="input-errors"></span>
 					</div>
 					<div class="form-group col-md-5 col-md-offset-2 no-padding">
@@ -57,6 +72,7 @@
 
 					<button type="submit" class="btn btn-default">Submit</button>
 				</form>
+				<?php } ?>
 			</div>
 		</div>
 	</div>

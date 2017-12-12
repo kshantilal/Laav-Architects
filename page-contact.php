@@ -3,9 +3,9 @@
 		Template Name: Contact Page Template
 	*/
 
+	$showThanks = false;
 	if (isset($_POST['contact_name'])) {
-		header('Location: /thankyou/');
-		exit;
+		$showThanks = true;
 		
 	}
 
@@ -21,6 +21,12 @@
 
 			</div>
 			<div class="col-md-6 col-md-offset-3">
+				<?php if($showThanks) { ?>
+
+				<h3 class="services">Thank you for your enquiry, We will get back to you as soon as possible</h3>
+				<h3 class="services"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Go back to the homepage</a></h3>
+
+				<?php } else { ?>
 				<form class="form" method="POST">
 					<div class="form-group col-md-5 no-padding">
 						<label for="firstName">First Name</label>
@@ -49,6 +55,7 @@
 
 					<button type="submit" id="form-submit-button" class="btn btn-default">Submit</button>
 				</form>
+				<?php } ?>
 			</div>
 		</div>
  	</div>
