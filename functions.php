@@ -644,7 +644,6 @@
 				color: <?php echo get_theme_mod('laav_about_text_colour'); ?>;
 			}
 
-
 			/*================*/
 			/*Footer*/
 			/*================*/

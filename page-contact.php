@@ -2,11 +2,18 @@
 	/*
 		Template Name: Contact Page Template
 	*/
+
+	if (isset($_POST['contact_name'])) {
+		header('Location: /thankyou/');
+		exit;
+		
+	}
+
  ?>
 
  <?php get_header(); ?>
  	<div class="container">
- 	<div class="back btn"><i class="fa fa-angle-left fa-lg" aria-hidden="true"></i>Back</div>
+ 		<div class="back btn"><i class="fa fa-angle-left fa-lg" aria-hidden="true"></i>Back</div>
  		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 
@@ -17,7 +24,7 @@
 				<form class="form" method="POST">
 					<div class="form-group col-md-5 no-padding">
 						<label for="firstName">First Name</label>
-						<input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+						<input type="text" class="form-control" name="contact_name" id="firstName" placeholder="First Name" required>
 						<span class="input-errors"></span>
 					</div>
 					<div class="form-group col-md-5 col-md-offset-2 no-padding">
@@ -40,7 +47,7 @@
 						<textarea class="form-control" rows="5" placeholder="Your Enquiry"></textarea>
 					</div>
 
-					<button type="submit" class="btn btn-default">Submit</button>
+					<button type="submit" id="form-submit-button" class="btn btn-default">Submit</button>
 				</form>
 			</div>
 		</div>
