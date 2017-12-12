@@ -42,7 +42,7 @@
 
 				<h3 class="services">Thank you for your enquiry, We will get back to you as soon as possible</h3>
 				<h3 class="services"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Go back to the homepage</a></h3>
-
+				
 				<?php } else { ?>
 				<form class="form" method="POST">
 					<div class="form-group col-md-5 no-padding">
