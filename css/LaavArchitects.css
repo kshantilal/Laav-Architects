@@ -27,20 +27,21 @@ a:hover{
 
 h1, h2, h3, h4, h5{
 	font-weight: 100;
-	font-variant-caps: all-petite-caps;
+	text-transform: uppercase;
 	letter-spacing: 4px;
 }
 
 .back{
-	font-variant-caps: all-petite-caps;
+	text-transform: uppercase;
 	letter-spacing: 4px;
 	font-size: 15px;
+
 }
 .btn:hover{
 	color: inherit;
 }
 .btn-default{
-	font-variant-caps: all-petite-caps;
+	text-transform: uppercase;
 	letter-spacing: 3px;
 }
 
@@ -65,7 +66,7 @@ ul{
 }
 .navbar{
 	margin-bottom: 50px;
-	font-variant-caps: all-petite-caps;
+	text-transform: uppercase;
 	font-size: 20px;
 }
 
@@ -166,7 +167,7 @@ ul{
 
 .footerSpacing{
 	margin-top: 100px;
-	font-variant-caps: all-petite-caps;
+	text-transform: uppercase;
 	letter-spacing: 3px;
 }
 
