@@ -4,7 +4,7 @@
 	// =============================================
 	function customThemeEnqueues(){
 		wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.7', 'all' );
-		wp_enqueue_style( 'customStyle', get_template_directory_uri() . '/css/LaavArchitects.css', array(), '1.0.0', 'all' );
+		wp_enqueue_style( 'customStyle', get_template_directory_uri() . '/css/LaavArchitects.min.css', array(), '1.0.0', 'all' );
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'bootstrapjs', get_template_directory_uri().'/js/bootstrap.min.js', array(), '3.3.7', true );
 		wp_enqueue_script( 'customScript', get_template_directory_uri() . '/js/LaavArchitects.js', array(), '1.0.0', true ); //true is asking is it in the footer. true or false.
@@ -14,6 +14,12 @@
 		wp_enqueue_style( 'wp-open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300', false );
 	}
 	add_action('wp_enqueue_scripts', 'addGoogleFonts');
+
+	function addFontAwesomeCDN(){
+		wp_enqueue_style('font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+	}
+	add_action('wp_enqueue_scripts', 'addFontAwesomeCDN');
+
 	// =============================================
 	// Header
 	// =============================================
