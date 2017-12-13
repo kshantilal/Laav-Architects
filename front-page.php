@@ -14,8 +14,6 @@
 					<?php while($images->have_posts()): $images->the_post(); ?>
 
 					<?php endwhile; ?>
-				
-
 				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 					<!-- Indicators -->
 					<ol class="carousel-indicators">
@@ -34,8 +32,6 @@
 						<?php $count++; ?>
 						<?php endwhile; ?>
 					</div>	
-				
-
 					<!-- Controls -->
 					<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 						<span class="fa fa-angle-left fa-2x fa-slider" aria-hidden="true"></span>
@@ -71,6 +67,3 @@
 		</div>
 	</div>
 <?php get_footer(); ?>
-
-	
-	

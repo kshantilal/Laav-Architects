@@ -1,16 +1,11 @@
 jQuery(document).ready(function($){
 
+	$('.back').click(function(){
+		goBack();
+	})
 
-$('.back').click(function(){
-	goBack();
-})
-
-function goBack(){
-	window.history.back();
-}
-
-
-
-
+	function goBack(){
+		window.history.back();
+	}
 
 });

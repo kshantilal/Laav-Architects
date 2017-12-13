@@ -11,57 +11,15 @@ var customUploader = wp.media({
 	state: 'insert',
 	frame: 'post',
 	multiple: true,
-	// button: {
-	//     text: 'Select'
-	// }
-});
+});	
 
-// var media_uploader = null;
-
-
-//     var media_uploader = wp.media({
-//         frame: 'post',
-//         state: 'insert',
-//         multiple: true
-//     });
-//     media_uploader.on('insert', function(){
-
-//         var attachment = media_uploader.state().get('selection').length;
-		
-//         hidden.setAttribute( 'value', JSON.stringify( [{ id: attachment.id, url: attachment.url }]) );
-//         toggleVisibility( 'ADD' );
-
-//         var length = media_uploader.state().get('selection').length;
-		
-//         var images = media_uploader.state().get('selection').models;
-		
-//         for(var i = 0; i < length; i++){
-			
-//             var image_url = images[i].changed.url;
-//             img.setAttribute( 'src', image_url );
-//             console.log(img);
-			
-//             var image_caption = images[i].changed.caption;
-//             var image_title = images[i].changed.title;
-//         }
-		
-
-//     });
-	
-	
-
-addButton.addEventListener( 'click', function() { //change media_uploader back to customUploader
+addButton.addEventListener( 'click', function() { 
 	if ( customUploader ) {
 		customUploader.open();
 	}
 } );
 
-// customUploader.on('gallery', function(){
-//     console.log("gallery Upload");
-
-// });
-
-customUploader.on( 'insert', function() { //select
+customUploader.on( 'insert', function() { 
 	console.log(customUploader.state().get('selection').toJSON());
 	var attachment = customUploader.state().get('selection').first().toJSON();
 	img.setAttribute( 'src', attachment.url );

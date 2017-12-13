@@ -24,8 +24,6 @@ function enqueue_media_uploader(){
 }
 add_action('admin_enqueue_scripts', 'enqueue_media_uploader');
 
-
-
 add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\register_admin_script' );
 function image_uploader_callback( $post_id ) {
 	wp_nonce_field( basename( __FILE__ ), 'custom_image_nonce' ); ?>
@@ -36,7 +34,6 @@ function image_uploader_callback( $post_id ) {
 		<input type="button" id="image-upload-button" class="button" value="Add Image">
 		<input type="button" id="image-delete-button" class="button" value="Delete Image">
 	</div>
-
 
 <?php
 }
@@ -49,8 +46,6 @@ function save_custom_image( $post_id ) {
 		return;
 	}
 	if ( isset( $_POST[ 'custom_image_data' ] ) ) {
-		// var_dump("here");
-		// die($_POST[ 'custom_image_data' ] );
 		$image_data = json_decode( stripslashes( $_POST[ 'custom_image_data' ] ) );
 		if ( is_object( $image_data[0] ) ) {
 			$image_data = array( 'id' => intval( $image_data[0]->id ), 'src' => esc_url_raw( $image_data[0]->url ) );
@@ -60,8 +55,6 @@ function save_custom_image( $post_id ) {
 		update_post_meta( $post_id, 'custom_image_data', $image_data );
 	}
 }
-
-
 add_action( 'save_post', __NAMESPACE__ . '\save_custom_image' );
 
 

@@ -24,13 +24,9 @@
  			 			</a>
  			 			<h3 class="titleNumberInline">#<?php echo get_post_meta($post->ID, 'ProjectNumber', true); ?></h3>
 				 		<h5 class="titleNumberInline"><?php the_title();?></h5>
-
-
  			 		</div>
  			 	<?php endwhile; wp_reset_query(); ?>
  			 <?php endif; ?>
  		</div>
  	</div>
-
-
  <?php get_footer(); ?>

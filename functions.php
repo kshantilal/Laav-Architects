@@ -61,11 +61,7 @@
 		add_theme_support( 'post_thumbnails' );
 	}
 	add_action( 'after_setup_theme', 'cropImages' );
-	// function move_featured_image(){
-	// 	remove_meta_box( 'image_metabox', 'projects', 'advanced' );
-	// 	add_meta_box( 'custom_image', 'Single Image', 'image_metabox', 'projects', 'advanced', 'high' );
-	// }
-	// add_action( 'submitpost_box', 'move_featured_image' );
+
 	// =============================================
 	// Front Page Slider Section
 	// =============================================
@@ -198,14 +194,6 @@
 				'title' => 'Project number',
 				'type' => 'number'
 			),
-			// 'ImageOne' => array(
-			// 	'title' => 'Image One',
-			// 	'desc' => 'Upload an image',
-			// 	'id' => $prefix . 'test_image',
-			// 	'type' => 'file',
-			// 	// 'allow' => array( 'url', 'attachment' ),// limit to just attachments with array( 'attachment' )
-			// 	'preview_size' => array( 100, 100 ), // Image size to use when previewing in the admin.
- 		// 	),
 		)
 	)
 	);
@@ -271,14 +259,6 @@
 	}
 
 	// =============================================
-	// Move featured image to left column
-	// =============================================
-	// function move_featured_image(){
-	// 	remove_meta_box( 'postimagediv', 'projects', 'side' );
-	// 	add_meta_box( 'custom_image', 'Featured Image', 'post_thumbnail_meta_box', 'projects', 'normal', 'high' );
-	// }
-	// add_action( 'submitpost_box', 'move_featured_image' );
-	// =============================================
 	// Delete Comments Section
 	// =============================================
 	function removeCommentsAdmin() {
@@ -340,9 +320,11 @@
 		}
 	}
 	add_action('init', 'df_disable_comments_admin_bar');
+	
 	// =============================================
 	// Customize
 	// =============================================
+	
 	function laavCustomise($wp_customize){
 		// ===================
 		// Settings
@@ -431,7 +413,6 @@
 				'transport' => 'refresh'
 			));
 
-
 		// ===================
 		// SECTION
 		// ===================
@@ -509,9 +490,7 @@
 				'section' => 'laav_master_section',
 				'settings' => 'laav_back_button_hover'
  			)));
-
-
-			
+		
 			//===============================
 			//Navigation Control Text Colour
 			//===============================
@@ -546,7 +525,6 @@
 				'settings' => 'laav_services_text_colour'
  			)));
 			
- 			
 			//===============================
 			//About Us Text
 			//===============================
@@ -578,9 +556,6 @@
 				'settings' => 'laav_footer_text_colour'
 			)));
 			
-
-
-
 	}
 	add_action('customize_register', 'laavCustomise');
 	// =============================================
@@ -655,16 +630,6 @@
 				color: <?php echo get_theme_mod('laav_footer_text_colour'); ?>;
 			}
 		</style>
-
-
 	<?php
 	}
 	add_action('wp_head', 'laav_customize_css');
-
-
-
-
-
-
-
-

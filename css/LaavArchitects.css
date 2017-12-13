@@ -3,7 +3,6 @@
   padding: 0px;
   box-sizing: border-box; }
 
-
 body{
 	font-family: 'Open Sans';
 	font-weight: 100;
@@ -181,7 +180,6 @@ footer{
 	text-align: center;
 }
 
-
 /*====================*/
 /*PROJECTS SINGLE*/
 /*====================*/
@@ -205,7 +203,6 @@ label{
 	font-size: 15px;
 	letter-spacing: 6px;
 }
-
 
 /*====================*/
 /*MEDIA QUERIES*/

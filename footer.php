@@ -1,6 +1,4 @@
 		</div><!-- Closing container  -->
-		
-
 		<footer class="footerSpacing">
 			<div class="row">
 				<div class="col-xs-12">

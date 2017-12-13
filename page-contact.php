@@ -16,9 +16,7 @@
  		<div class="back btn"><i class="fa fa-angle-left fa-lg" aria-hidden="true"></i>Back</div>
  		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-
-			<h1 class="serviceTitle"><?php the_title(); ?></h1>
-
+				<h1 class="serviceTitle"><?php the_title(); ?></h1>
 			</div>
 			<div class="col-md-6 col-md-offset-3">
 				<?php if($showThanks) { ?>
@@ -59,6 +57,4 @@
 			</div>
 		</div>
  	</div>
-
-
  <?php get_footer(); ?>
