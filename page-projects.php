@@ -11,7 +11,7 @@
  			<?php 
  				$arg = array(
  					'post_type' => 'projects',
- 					'posts_per_page' => 9,
+ 					'posts_per_page' => 99,
  				);
  			 ?>
  			 <?php $projectPosts = new WP_Query($arg); ?>

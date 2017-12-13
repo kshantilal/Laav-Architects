@@ -1,4 +1,6 @@
 
+jQuery(document).ready(function($){
+
 var addButton = document.getElementById( 'image-upload-button' );
 var deleteButton = document.getElementById( 'image-delete-button' );
 var img = document.getElementById( 'image-tag' );
@@ -57,7 +59,7 @@ window.addEventListener( 'DOMContentLoaded', function() {
 	}
 } );
 
-
+});
 
 
 
